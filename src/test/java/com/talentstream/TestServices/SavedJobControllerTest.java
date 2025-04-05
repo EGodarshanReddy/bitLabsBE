@@ -1,29 +1,38 @@
 package com.talentstream.TestServices;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.mockito.Mockito.doNothing;
-import static org.mockito.Mockito.doThrow;
-import static org.mockito.Mockito.times;
-import static org.mockito.Mockito.verify;
+
+
+import com.talentstream.entity.*;
+import com.talentstream.exception.CustomException;
+import com.talentstream.repository.*;
+import com.talentstream.service.SavedJobService;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.mockito.InjectMocks;
-import org.mockito.Mock;
-import org.mockito.MockitoAnnotations;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
+import org.mockito.*;
+import org.springframework.data.domain.*;
 
-import com.talentstream.controller.SavedJobController;
-import com.talentstream.service.SavedJobService;
+import java.util.*;
 
-public class SavedJobControllerTest {
+import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.Mockito.*;
 
-    @Mock
-    private SavedJobService savedJobService;
+class SavedJobServiceTest {
 
     @InjectMocks
-    private SavedJobController savedJobController;
+    private SavedJobService savedJobService;
+
+    @Mock
+    private SavedJobRepository savedJobRepository;
+
+    @Mock
+    private JobRepository jobRepository;
+
+    @Mock
+    private RegisterRepository applicantRepository;
+
+    @Mock
+    private ApplyJobRepository applyJobRepository;
 
     @BeforeEach
     void setUp() {
@@ -33,32 +42,94 @@ public class SavedJobControllerTest {
     @Test
     void testSaveJobForApplicant_Success() throws Exception {
         long applicantId = 1L;
-        long jobId = 101L;
+        long jobId = 2L;
+        Applicant applicant = new Applicant();
+        Job job = new Job();
 
-        doNothing().when(savedJobService).saveJobForApplicant(applicantId, jobId);
+        when(applicantRepository.findById(applicantId)).thenReturn(applicant);
+        when(jobRepository.findById(jobId)).thenReturn(Optional.of(job));
+        when(savedJobRepository.existsByApplicantAndJob(applicant, job)).thenReturn(false);
 
-        ResponseEntity<String> response = savedJobController.saveJobForApplicant(applicantId, jobId);
-
-        assertEquals(HttpStatus.OK, response.getStatusCode());
-        assertEquals("Job saved successfully for the applicant.", response.getBody());
-
-        verify(savedJobService, times(1)).saveJobForApplicant(applicantId, jobId);
+        assertDoesNotThrow(() -> savedJobService.saveJobForApplicant(applicantId, jobId));
+        verify(savedJobRepository).save(any(SavedJob.class));
     }
 
+    @Test
+    void testSaveJobForApplicant_AlreadySaved() {
+        long applicantId = 1L;
+        long jobId = 2L;
+        Applicant applicant = new Applicant();
+        Job job = new Job();
 
+        when(applicantRepository.findById(applicantId)).thenReturn(applicant);
+        when(jobRepository.findById(jobId)).thenReturn(Optional.of(job));
+        when(savedJobRepository.existsByApplicantAndJob(applicant, job)).thenReturn(true);
+
+        CustomException ex = assertThrows(CustomException.class, () ->
+                savedJobService.saveJobForApplicant(applicantId, jobId));
+        assertEquals("Job has already been saved by the applicant", ex.getMessage());
+    }
 
     @Test
-    void testSaveJobForApplicant_GenericException() throws Exception {
+    void testGetSavedJobsForApplicant_WithResults() {
         long applicantId = 1L;
-        long jobId = 101L;
+        int page = 0;
+        int size = 2;
 
-        doThrow(new RuntimeException("DB error")).when(savedJobService).saveJobForApplicant(applicantId, jobId);
+        List<Long> savedJobIds = List.of(10L, 20L);
+        List<Job> jobList = Arrays.asList(new Job(), new Job());
+        Pageable pageable = PageRequest.of(page, size);
+        Page<Job> jobPage = new PageImpl<>(jobList, pageable, jobList.size());
 
-        ResponseEntity<String> response = savedJobController.saveJobForApplicant(applicantId, jobId);
+        when(savedJobRepository.findSavedJobIdsByApplicantId(applicantId)).thenReturn(savedJobIds);
+        when(jobRepository.findJobsByIds(savedJobIds, pageable)).thenReturn(jobPage);
 
-        assertEquals(HttpStatus.INTERNAL_SERVER_ERROR, response.getStatusCode());
-        assertEquals("Error saving job for the applicant.", response.getBody());
+        Page<Job> result = savedJobService.getSavedJobsForApplicant(applicantId, page, size);
+        assertEquals(2, result.getContent().size());
+    }
 
-        verify(savedJobService, times(1)).saveJobForApplicant(applicantId, jobId);
+    @Test
+    void testCountSavedJobsForApplicant_ValidApplicant() {
+        long applicantId = 1L;
+        when(applicantRepository.existsById(applicantId)).thenReturn(true);
+        when(savedJobRepository.countByApplicantId(applicantId)).thenReturn(3L);
+
+        long count = savedJobService.countSavedJobsForApplicant(applicantId);
+        assertEquals(3L, count);
+    }
+
+    @Test
+    void testCountSavedJobsForApplicant_InvalidApplicant() {
+        long applicantId = 1L;
+        when(applicantRepository.existsById(applicantId)).thenReturn(false);
+
+        CustomException ex = assertThrows(CustomException.class, () ->
+                savedJobService.countSavedJobsForApplicant(applicantId));
+        assertEquals("Applicant not found", ex.getMessage());
+    }
+
+    @Test
+    void testDeleteSavedJobForApplicant_Success() {
+        long applicantId = 1L;
+        long jobId = 2L;
+
+        when(applicantRepository.existsById(applicantId)).thenReturn(true);
+        when(jobRepository.existsById(jobId)).thenReturn(true);
+        when(savedJobRepository.deleteByApplicantIdAndJobId(applicantId, jobId)).thenReturn(1);
+
+        int deleted = savedJobService.deleteSavedJobForApplicant(applicantId, jobId);
+        assertEquals(1, deleted);
+    }
+
+    @Test
+    void testDeleteSavedJobForApplicant_ApplicantNotFound() {
+        long applicantId = 1L;
+        long jobId = 2L;
+
+        when(applicantRepository.existsById(applicantId)).thenReturn(false);
+
+        CustomException ex = assertThrows(CustomException.class, () ->
+                savedJobService.deleteSavedJobForApplicant(applicantId, jobId));
+        assertEquals("Applicant not found", ex.getMessage());
     }
 }
