@@ -14,36 +14,36 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class SpringAOPClass {
 	
-	@Before("execution(*, com.talentstream.service.*.*(..)")
-	public void LoggersBeforeService(JoinPoint joinPoint)
-	{
-		String className = joinPoint.getTarget().getClass().getName();
-        String methodName = joinPoint.getSignature().getName();
- 
-        log.info("Executing Service method: " + methodName + "() in class: " + className);		
-	}
-
-    @Before("execution(* com.tekworks.rental.controller.*.*(..))")
-    public void loggerBeforeController(JoinPoint joinPoint) {
-        String className = joinPoint.getTarget().getClass().getName();
-        String methodName = joinPoint.getSignature().getName();
- 
-        log.info("Executing Controller method: " + methodName + "() in class: " + className);
-    }
-    @After("execution(* com.tekworks.rental.service.*.*(..))")
-    public void loggerAfterService(JoinPoint joinPoint) {
-        String className = joinPoint.getTarget().getClass().getName();
-        String methodName = joinPoint.getSignature().getName();
- 
-        log.info("Execution Completed Service method: " + methodName + "() in class: " + className);
-    }
-    @After("execution(* com.tekworks.rental.controller.*.*(..))")
-    public void loggerAfterController(JoinPoint joinPoint) {
-        String className = joinPoint.getTarget().getClass().getName();
-        String methodName = joinPoint.getSignature().getName();
- 
-        log.info("Execution Completed  Controller method: " + methodName + "() in class: " + className);
-    }
+//	@Before("execution(*, com.talentstream.service.*.*(..)")
+//	public void LoggersBeforeService(JoinPoint joinPoint)
+//	{
+//		String className = joinPoint.getTarget().getClass().getName();
+//        String methodName = joinPoint.getSignature().getName();
+// 
+//        log.info("Executing Service method: " + methodName + "() in class: " + className);		
+//	}
+//
+//    @Before("execution(* com.talentstream.controller.*.*(..))")
+//    public void loggerBeforeController(JoinPoint joinPoint) {
+//        String className = joinPoint.getTarget().getClass().getName();
+//        String methodName = joinPoint.getSignature().getName();
+// 
+//        log.info("Executing Controller method: " + methodName + "() in class: " + className);
+//    }
+//    @After("execution(* com.talentstream.service.*.*(..))")
+//    public void loggerAfterService(JoinPoint joinPoint) {
+//        String className = joinPoint.getTarget().getClass().getName();
+//        String methodName = joinPoint.getSignature().getName();
+// 
+//        log.info("Execution Completed Service method: " + methodName + "() in class: " + className);
+//    }
+//    @After("execution(* com.talentstream.controller.*.*(..))")
+//    public void loggerAfterController(JoinPoint joinPoint) {
+//        String className = joinPoint.getTarget().getClass().getName();
+//        String methodName = joinPoint.getSignature().getName();
+// 
+//        log.info("Execution Completed  Controller method: " + methodName + "() in class: " + className);
+//    }
 }
 
 

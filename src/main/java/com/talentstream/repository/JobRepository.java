@@ -12,7 +12,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
-import com.talentstream.entity.ApplicantSkills;
+import com.talentstream.dto.GetSavedJobDTO;
 import com.talentstream.entity.Job;
 
 @Repository
@@ -90,9 +90,13 @@ public interface JobRepository extends JpaRepository<Job, Long>, JpaSpecificatio
 
 	@Query("SELECT COUNT(j) FROM Job j WHERE j.jobRecruiter.id = :recruiterId AND j.status = 'inactive'")
 	long countInActiveJobsByRecruiterId(@Param("recruiterId") Long recruiterId);
-
-	@Query("SELECT j FROM Job j WHERE j.id IN :jobIds ORDER BY j.id ASC")
-	Page<Job> findJobsByIds(@Param("jobIds") List<Long> jobIds, Pageable pageable);
+//
+//	@Query("SELECT j FROM Job j WHERE j.id IN :jobIds ORDER BY j.id ASC")
+//	Page<Job> findJobsByIds(@Param("jobIds") List<Long> jobIds, Pageable pageable);
+	
+	@Query("SELECT new com.talentstream.dto.GetSavedJobDTO(j.id, j.minimumExperience, j.maximumExperience, j.jobTitle, j.minSalary, j.maxSalary, j.employeeType, j.industryType, j.creationDate, j.jobRecruiter.companyname) FROM Job j WHERE j.id IN :jobIds ORDER BY j.id ASC")
+	Page<GetSavedJobDTO> findJobsByIds(@Param("jobIds") List<Long> jobIds, Pageable pageable);
+	
 
 	@Query("SELECT DISTINCT j " + "FROM Job j "
 			+ "LEFT JOIN SavedJob asj ON asj.job = j AND asj.applicant.id = :applicantId "

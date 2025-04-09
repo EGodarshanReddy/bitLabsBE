@@ -11,6 +11,7 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 
+import com.talentstream.dto.GetSavedJobDTO;
 import com.talentstream.dto.JobDTO;
 import com.talentstream.entity.Applicant;
 import com.talentstream.entity.Job;
@@ -78,7 +79,7 @@ public class SavedJobService {
     // return result;
     // }
 
-    public Page<Job> getSavedJobsForApplicant(long applicantId, int page, int size) {
+    public Page<GetSavedJobDTO> getSavedJobsForApplicant(long applicantId, int page, int size) {
         Pageable pageable = PageRequest.of(page, size);
 
         try {
@@ -90,7 +91,7 @@ public class SavedJobService {
             }
 
             // Apply pagination directly in the repository query
-            Page<Job> jobs = jobRepository.findJobsByIds(savedJobIds, pageable);
+            Page<GetSavedJobDTO> jobs = jobRepository.findJobsByIds(savedJobIds, pageable);
 
             return jobs;
 
