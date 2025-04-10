@@ -1,8 +1,12 @@
 package com.talentstream.service;
 
-import java.util.*;
+import java.util.Collections;
+import java.util.List;
+import java.util.Optional;
+import java.util.Set;
 import java.util.stream.Collectors;
 
+import org.modelmapper.ModelMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,17 +15,17 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 
-import com.talentstream.dto.JobDTO;
+import com.talentstream.dto.GetJobDTO;
 import com.talentstream.dto.RecuriterSkillsDTO;
 import com.talentstream.entity.Applicant;
 import com.talentstream.entity.ApplicantProfile;
 import com.talentstream.entity.ApplicantSkills;
 import com.talentstream.entity.Job;
 import com.talentstream.entity.RecuriterSkills;
+import com.talentstream.exception.CustomException;
 import com.talentstream.repository.ApplicantProfileRepository;
 import com.talentstream.repository.ApplyJobRepository;
 import com.talentstream.repository.JobRepository;
-import com.talentstream.exception.CustomException;
 import com.talentstream.repository.RegisterRepository;
 import com.talentstream.repository.SavedJobRepository;
 
@@ -48,6 +52,8 @@ public class FinRecommendedJobService {
 
     @Autowired
     private SavedJobRepository savedJobRepository;
+    
+    final ModelMapper modelMapper = new ModelMapper();
 
     private static final Logger logger = LoggerFactory.getLogger(FinRecommendedJobService.class);
 
@@ -132,17 +138,75 @@ public class FinRecommendedJobService {
 
     // Finds active jobs that match the skills of the applicant identified by
     // applicantId.
-    public List<JobDTO> recommendJobsForApplicant(long applicantId, int page, int size) {
+//    public Page<GetJobDTO> recommendJobsForApplicant(long applicantId, int page, int size) {
+//        ApplicantProfile applicantProfile = applicantRepository.findByApplicantId(applicantId);
+//
+//        if (applicantProfile == null) {
+//            throw new CustomException("Applicant profile not found", HttpStatus.NOT_FOUND);
+//        }
+//
+//        Set<String> skillNames = applicantProfile.getSkillsRequired().stream()
+//                .map(skill -> skill.getSkillName().toLowerCase())
+//                .collect(Collectors.toSet());
+//
+//        Set<String> preferredLocations = applicantProfile.getPreferredJobLocations();
+//        Integer experience = null;
+//        try {
+//            experience = Integer.parseInt(applicantProfile.getExperience());
+//        } catch (NumberFormatException e) {
+//            logger.warn("Warning: Unable to parse experience as Integer");
+//        }
+//        Pageable pageable = PageRequest.of(page, size);
+//
+//        Page<GetJobDTO> jobPage = jobRepository.GetRecomendedJobs(
+//                applicantId,
+//                skillNames,
+//                preferredLocations,
+//                experience,
+//                applicantProfile.getSpecialization(),
+//                pageable);
+//
+//        return jobPage;
+//
+//    }
+//
+//    private JobDTO convertEntityToDTO(Job job) {
+//        JobDTO jobDTO = new JobDTO();
+//        jobDTO.setId(job.getId());
+//        jobDTO.setJobTitle(job.getJobTitle());
+//        jobDTO.setMinimumExperience(job.getMinimumExperience());
+//        jobDTO.setMaximumExperience(job.getMaximumExperience());
+//        jobDTO.setMinSalary(job.getMinSalary());
+//        jobDTO.setMaxSalary(job.getMaxSalary());
+//        jobDTO.setLocation(job.getLocation());
+//        jobDTO.setEmployeeType(job.getEmployeeType());
+//        jobDTO.setIndustryType(job.getIndustryType());
+//        jobDTO.setMinimumQualification(job.getMinimumQualification());
+//        jobDTO.setRecruiterId(job.getJobRecruiter().getRecruiterId());
+//        jobDTO.setCompanyname(job.getJobRecruiter().getCompanyname());
+//        jobDTO.setEmail(job.getJobRecruiter().getEmail());
+//        jobDTO.setMobilenumber(job.getJobRecruiter().getMobilenumber());
+//        jobDTO.setSpecialization(job.getSpecialization());
+//        jobDTO.setDescription(job.getDescription());
+//        jobDTO.setCreationDate(job.getCreationDate());
+//        jobDTO.setIsSaved(job.getIsSaved());
+//
+//        Set<RecuriterSkillsDTO> skillsDTOList = job.getSkillsRequired().stream()
+//                .map(this::convertSkillsEntityToDTO)
+//                .collect(Collectors.toSet());
+//        jobDTO.setSkillsRequired(skillsDTOList);
+//        return jobDTO;
+//    }
+    public List<GetJobDTO> recommendJobsForApplicant(long applicantId, int page, int size) {
         ApplicantProfile applicantProfile = applicantRepository.findByApplicantId(applicantId);
-
         if (applicantProfile == null) {
             throw new CustomException("Applicant profile not found", HttpStatus.NOT_FOUND);
         }
-
+ 
         Set<String> skillNames = applicantProfile.getSkillsRequired().stream()
                 .map(skill -> skill.getSkillName().toLowerCase())
                 .collect(Collectors.toSet());
-
+ 
         Set<String> preferredLocations = applicantProfile.getPreferredJobLocations();
         Integer experience = null;
         try {
@@ -150,47 +214,31 @@ public class FinRecommendedJobService {
         } catch (NumberFormatException e) {
             logger.warn("Warning: Unable to parse experience as Integer");
         }
-
-        Page<Job> jobPage = jobRepository.findJobsMatchingApplicantProfile(
-                applicantId,
+ 
+        
+ 
+        Set<Long> appliedJobIds = applyJobRepository.findJobIdsByApplicantId(applicantId);
+        Set<Long> savedJobIds = savedJobRepository.findJobIdsByApplicantId(applicantId);
+        appliedJobIds.add((long) 0);
+        
+        Page<GetJobDTO> jobDataPage = jobRepository.GetRecomendedJobs(
                 skillNames,
                 preferredLocations,
                 experience,
                 applicantProfile.getSpecialization(),
-                PageRequest.of(page, size));
-
-        return jobPage.getContent().stream().parallel()
-                .map(this::convertEntityToDTO)
-                .collect(Collectors.toList());
-
-    }
-
-    private JobDTO convertEntityToDTO(Job job) {
-        JobDTO jobDTO = new JobDTO();
-        jobDTO.setId(job.getId());
-        jobDTO.setJobTitle(job.getJobTitle());
-        jobDTO.setMinimumExperience(job.getMinimumExperience());
-        jobDTO.setMaximumExperience(job.getMaximumExperience());
-        jobDTO.setMinSalary(job.getMinSalary());
-        jobDTO.setMaxSalary(job.getMaxSalary());
-        jobDTO.setLocation(job.getLocation());
-        jobDTO.setEmployeeType(job.getEmployeeType());
-        jobDTO.setIndustryType(job.getIndustryType());
-        jobDTO.setMinimumQualification(job.getMinimumQualification());
-        jobDTO.setRecruiterId(job.getJobRecruiter().getRecruiterId());
-        jobDTO.setCompanyname(job.getJobRecruiter().getCompanyname());
-        jobDTO.setEmail(job.getJobRecruiter().getEmail());
-        jobDTO.setMobilenumber(job.getJobRecruiter().getMobilenumber());
-        jobDTO.setSpecialization(job.getSpecialization());
-        jobDTO.setDescription(job.getDescription());
-        jobDTO.setCreationDate(job.getCreationDate());
-        jobDTO.setIsSaved(job.getIsSaved());
-
-        Set<RecuriterSkillsDTO> skillsDTOList = job.getSkillsRequired().stream()
-                .map(this::convertSkillsEntityToDTO)
-                .collect(Collectors.toSet());
-        jobDTO.setSkillsRequired(skillsDTOList);
-        return jobDTO;
+                appliedJobIds,
+                savedJobIds,
+                PageRequest.of(page, size)
+        );
+        
+        List<GetJobDTO> recomendedJobs = jobDataPage.stream().map(job -> {
+        	GetJobDTO jobDTO = modelMapper.map(job, GetJobDTO.class);               
+            return jobDTO;
+        }).collect(Collectors.toList());
+ 
+        
+ 
+        return recomendedJobs;
     }
 
     private RecuriterSkillsDTO convertSkillsEntityToDTO(RecuriterSkills skill) {

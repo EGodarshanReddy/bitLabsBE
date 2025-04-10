@@ -23,6 +23,7 @@ import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.stereotype.Service;
 
 import com.talentstream.dto.ApplicantSkillBadgeDTO;
+import com.talentstream.dto.GetJobDTO;
 import com.talentstream.dto.JobDTO;
 import com.talentstream.dto.RecuriterSkillsDTO;
 import com.talentstream.entity.Alerts;
@@ -283,36 +284,13 @@ public class ApplyJobService {
 	}
 
 	// Retrieves a list of job details for jobs applied to by a specific applicant.
-	public Page<JobDTO> getAppliedJobsForApplicant(long applicantId, int page, int size) {
+	public Page<GetJobDTO> getAppliedJobsForApplicant(long applicantId, int page, int size) {
 		try {
 			Pageable pageable = PageRequest.of(page, size);
-			Page<ApplyJob> appliedJobsPage = applyJobRepository.findByApplicantId(applicantId, pageable);
+			Page<GetJobDTO> appliedJobsPage = applyJobRepository.findByApplicantId(applicantId, pageable);        
+           
 
-			Page<JobDTO> jobDTOPage = appliedJobsPage.map(appliedJob -> {
-				Job job = appliedJob.getJob();
-				JobDTO jobDTO = new JobDTO();
-				jobDTO.setId(job.getId());
-				jobDTO.setRecruiterId(job.getJobRecruiter().getRecruiterId());
-				jobDTO.setCompanyname(job.getJobRecruiter().getCompanyname());
-				jobDTO.setJobTitle(job.getJobTitle());
-				jobDTO.setMinimumExperience(job.getMinimumExperience());
-				jobDTO.setMaximumExperience(job.getMaximumExperience());
-				jobDTO.setMaxSalary(job.getMaxSalary());
-				jobDTO.setMinSalary(job.getMinSalary());
-				jobDTO.setLocation(job.getLocation());
-				jobDTO.setEmployeeType(job.getEmployeeType());
-				jobDTO.setIndustryType(job.getIndustryType());
-				jobDTO.setMinimumQualification(job.getMinimumQualification());
-				jobDTO.setSpecialization(job.getSpecialization());
-				jobDTO.setSkillsRequired(new HashSet<>()); // Initialize empty skills set
-				jobDTO.setDescription(job.getDescription());
-				jobDTO.setCreationDate(job.getCreationDate());
-				jobDTO.setEmail(job.getJobRecruiter().getEmail());
-				jobDTO.setApplyJobId(appliedJob.getApplyjobid());
-				return jobDTO;
-			});
-
-			return jobDTOPage;
+			return appliedJobsPage;
 		} catch (Exception e) {
 			throw new CustomException("Failed to get applied jobs for the applicant", HttpStatus.INTERNAL_SERVER_ERROR);
 		}

@@ -299,3 +299,27 @@ execution(*, com.talentstream.service.*.*(..)
 09-04-2025_21:26:04.218{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|JWT: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnb2RhcnNoYW5yZWRkeUBnbWFpbC5jb20iLCJleHAiOjE3NDQyNDI3OTksImlhdCI6MTc0NDIwNjc5OX0.wKSYh2lkhhSnULu7SLbRomR-z0YIob51H31y15YFzVM
 09-04-2025_21:26:04.218{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|Username: godarshanreddy@gmail.com
 09-04-2025_21:26:04.319{UTC}|report-tool|INFO ||c.t.u.ResponseSizeLogger|API [/savedjob/getSavedJobs/75] response size: 2131 bytes (~2.08 KB)
+09-04-2025_21:26:17.158{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|Authorization Header: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnb2RhcnNoYW5yZWRkeUBnbWFpbC5jb20iLCJleHAiOjE3NDQyNDI3OTksImlhdCI6MTc0NDIwNjc5OX0.wKSYh2lkhhSnULu7SLbRomR-z0YIob51H31y15YFzVM
+09-04-2025_21:26:17.159{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|JWT: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnb2RhcnNoYW5yZWRkeUBnbWFpbC5jb20iLCJleHAiOjE3NDQyNDI3OTksImlhdCI6MTc0NDIwNjc5OX0.wKSYh2lkhhSnULu7SLbRomR-z0YIob51H31y15YFzVM
+09-04-2025_21:26:17.159{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|Username: godarshanreddy@gmail.com
+09-04-2025_21:26:17.230{UTC}|report-tool|INFO ||c.t.u.ResponseSizeLogger|API [/savedjob/getSavedJobs/75] response size: 213 bytes (~0.21 KB)
+09-04-2025_21:39:44.902{UTC}|report-tool|WARN ||c.z.h.p.PoolBase|HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@2c3679e5 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+09-04-2025_21:43:03.401{UTC}|report-tool|INFO ||o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin|Application shutdown requested.
+09-04-2025_21:43:03.407{UTC}|report-tool|INFO ||o.a.c.h.Http11NioProtocol|Pausing ProtocolHandler ["http-nio-8081"]
+09-04-2025_21:43:03.408{UTC}|report-tool|INFO ||o.a.c.c.StandardService|Stopping service [Tomcat]
+09-04-2025_21:43:03.410{UTC}|report-tool|INFO ||o.a.c.c.C.[.[.[/]|Destroying Spring FrameworkServlet 'dispatcherServlet'
+09-04-2025_21:43:03.414{UTC}|report-tool|WARN ||o.a.c.l.WebappClassLoaderBase|The web application [ROOT] appears to have started a thread named [HikariPool-1 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+ java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1763)
+ java.base/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+ java.base/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+ java.base/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)
+ java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+ java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+ java.base/java.lang.Thread.run(Thread.java:1583)
+09-04-2025_21:43:03.415{UTC}|report-tool|INFO ||o.a.c.h.Http11NioProtocol|Stopping ProtocolHandler ["http-nio-8081"]
+09-04-2025_21:43:03.419{UTC}|report-tool|INFO ||o.a.c.h.Http11NioProtocol|Destroying ProtocolHandler ["http-nio-8081"]
+09-04-2025_21:43:03.439{UTC}|report-tool|INFO ||o.s.o.j.LocalContainerEntityManagerFactoryBean|Closing JPA EntityManagerFactory for persistence unit 'default'
+09-04-2025_21:43:03.441{UTC}|report-tool|INFO ||c.z.h.HikariDataSource|HikariPool-1 - Shutdown initiated...
+09-04-2025_21:43:04.088{UTC}|report-tool|INFO ||c.z.h.HikariDataSource|HikariPool-1 - Shutdown completed.

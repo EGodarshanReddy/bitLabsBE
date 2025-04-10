@@ -1,27 +1,23 @@
 package com.talentstream.service;
 
-import com.talentstream.exception.CustomException;
-import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 
-import com.talentstream.dto.GetSavedJobDTO;
-import com.talentstream.dto.JobDTO;
+import com.talentstream.dto.GetJobDTO;
 import com.talentstream.entity.Applicant;
 import com.talentstream.entity.Job;
 import com.talentstream.entity.SavedJob;
+import com.talentstream.exception.CustomException;
 import com.talentstream.repository.ApplyJobRepository;
 import com.talentstream.repository.JobRepository;
 import com.talentstream.repository.RegisterRepository;
 import com.talentstream.repository.SavedJobRepository;
-
-import org.springframework.data.domain.Pageable;
 
 @Service
 public class SavedJobService {
@@ -79,7 +75,7 @@ public class SavedJobService {
     // return result;
     // }
 
-    public Page<GetSavedJobDTO> getSavedJobsForApplicant(long applicantId, int page, int size) {
+    public Page<GetJobDTO> getSavedJobsForApplicant(long applicantId, int page, int size) {
         Pageable pageable = PageRequest.of(page, size);
 
         try {
@@ -91,7 +87,7 @@ public class SavedJobService {
             }
 
             // Apply pagination directly in the repository query
-            Page<GetSavedJobDTO> jobs = jobRepository.findJobsByIds(savedJobIds, pageable);
+            Page<GetJobDTO> jobs = jobRepository.findJobsByIds(savedJobIds, pageable);
 
             return jobs;
 

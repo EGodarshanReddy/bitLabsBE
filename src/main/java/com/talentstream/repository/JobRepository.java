@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Set;
 
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
@@ -12,7 +13,8 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
-import com.talentstream.dto.GetSavedJobDTO;
+import com.talentstream.dto.GetJobDTO;
+import com.talentstream.dto.GetJobDTO;
 import com.talentstream.entity.Job;
 
 @Repository
@@ -94,21 +96,78 @@ public interface JobRepository extends JpaRepository<Job, Long>, JpaSpecificatio
 //	@Query("SELECT j FROM Job j WHERE j.id IN :jobIds ORDER BY j.id ASC")
 //	Page<Job> findJobsByIds(@Param("jobIds") List<Long> jobIds, Pageable pageable);
 	
-	@Query("SELECT new com.talentstream.dto.GetSavedJobDTO(j.id, j.minimumExperience, j.maximumExperience, j.jobTitle, j.minSalary, j.maxSalary, j.employeeType, j.industryType, j.creationDate, j.jobRecruiter.companyname) FROM Job j WHERE j.id IN :jobIds ORDER BY j.id ASC")
-	Page<GetSavedJobDTO> findJobsByIds(@Param("jobIds") List<Long> jobIds, Pageable pageable);
+//	@Query("SELECT new com.talentstream.dto.GetJobDTO(j.id, j.minimumExperience, j.maximumExperience, j.jobTitle, j.minSalary, j.maxSalary, j.employeeType, j.industryType, j.location,j.creationDate, j.jobRecruiter.companyname) FROM Job j WHERE j.id IN :jobIds ORDER BY j.id ASC")
+//	Page<GetJobDTO> findJobsByIds(@Param("jobIds") List<Long> jobIds, Pageable pageable);
+	@Query("SELECT new com.talentstream.dto.GetJobDTO(" +
+		       "j.id, j.minimumExperience, j.maximumExperience, j.jobTitle, j.minSalary, j.maxSalary, " +
+		       "j.employeeType, j.industryType, j.creationDate, j.location, j.jobRecruiter.companyname) " +
+		       "FROM Job j WHERE j.id IN :jobIds ORDER BY j.id ASC")
+		Page<GetJobDTO> findJobsByIds(@Param("jobIds") List<Long> jobIds, Pageable pageable);
+
 	
 
-	@Query("SELECT DISTINCT j " + "FROM Job j "
-			+ "LEFT JOIN SavedJob asj ON asj.job = j AND asj.applicant.id = :applicantId "
-			+ "LEFT JOIN ApplyJob aj ON aj.job = j AND aj.applicant.id = :applicantId "
-			+ "WHERE j.status != 'inactive' " + "AND aj.id IS NULL " + // Exclude applied jobs
-			"AND asj.id IS NULL " + // Exclude saved jobs
-			"AND (LOWER(j.specialization) = LOWER(:specialization) " + "OR j.minimumExperience = :experience "
-			+ "OR j.location IN :preferredLocations "
-			+ "OR EXISTS (SELECT 1 FROM j.skillsRequired s WHERE LOWER(s.skillName) IN :skillNames))")
-	Page<Job> findJobsMatchingApplicantProfile(@Param("applicantId") long applicantId,
-			@Param("skillNames") Set<String> skillNames, @Param("preferredLocations") Set<String> preferredLocations,
-			@Param("experience") Integer experience, @Param("specialization") String specialization, Pageable pageable);
+//	@Query("SELECT DISTINCT j " + "FROM Job j "
+//			+ "LEFT JOIN SavedJob asj ON asj.job = j AND asj.applicant.id = :applicantId "
+//			+ "LEFT JOIN ApplyJob aj ON aj.job = j AND aj.applicant.id = :applicantId "
+//			+ "WHERE j.status != 'inactive' " + "AND aj.id IS NULL " + // Exclude applied jobs
+//			"AND asj.id IS NULL " + // Exclude saved jobs
+//			"AND (LOWER(j.specialization) = LOWER(:specialization) " + "OR j.minimumExperience = :experience "
+//			+ "OR j.location IN :preferredLocations "
+//			+ "OR EXISTS (SELECT 1 FROM j.skillsRequired s WHERE LOWER(s.skillName) IN :skillNames))")
+//	Page<Job> findJobsMatchingApplicantProfile(@Param("applicantId") long applicantId,
+//			@Param("skillNames") Set<String> skillNames, @Param("preferredLocations") Set<String> preferredLocations,
+//			@Param("experience") Integer experience, @Param("specialization") String specialization, Pageable pageable);
+	
+	
+//	@Query("SELECT new com.talentstream.dto.GetJobDTO(" +
+//		       "j.id, j.minimumExperience, j.maximumExperience, j.jobTitle, j.minSalary, j.maxSalary, j.employeeType, j.industryType, j.creationDate, j.jobRecruiter.companyname)" +
+//		       "FROM Job j " +
+//		       "LEFT JOIN j.skillsRequired s " +
+//		       "WHERE j.status != 'inactive' " +
+//		       "AND j.id NOT IN :appliedJobIds " +
+//		       "AND j.id NOT IN :savedJobIds " +
+//		       "AND (" +
+//		       "  LOWER(j.specialization) = LOWER(:specialization) " +
+//		       "  OR j.minimumExperience = :experience " +
+//		       "  OR j.location IN :preferredLocations " +
+//		       "  OR LOWER(s.skillName) IN :skillNames" +
+//		       ") " +
+//		       "ORDER BY j.creationDate DESC")
+//		Page<GetJobDTO> GetRecomendedJobs(
+//		        @Param("skillNames") Set<String> skillNames,
+//		        @Param("preferredLocations") Set<String> preferredLocations,
+//		        @Param("experience") Integer experience,
+//		        @Param("specialization") String specialization,
+//		        @Param("appliedJobIds") Set<Long> appliedJobIds,
+//		        @Param("savedJobIds") Set<Long> savedJobIds,
+//		        Pageable pageable);
+
+	@Query("SELECT new com.talentstream.dto.GetJobDTO(" +
+		       "j.id, j.minimumExperience, j.maximumExperience, j.jobTitle, j.minSalary, j.maxSalary, " +
+		       "j.employeeType, j.industryType, j.creationDate, j.location, j.jobRecruiter.companyname) " +
+		       "FROM Job j " +
+		       "LEFT JOIN j.skillsRequired s " +
+		       "WHERE j.status != 'inactive' " +
+		       "AND j.id NOT IN :appliedJobIds " +
+		       "AND j.id NOT IN :savedJobIds " +
+		       "AND (" +
+		       "  LOWER(j.specialization) = LOWER(:specialization) " +
+		       "  OR j.minimumExperience = :experience " +
+		       "  OR j.location IN :preferredLocations " +
+		       "  OR LOWER(s.skillName) IN :skillNames" +
+		       ") " +
+		       "ORDER BY j.creationDate DESC")
+		Page<GetJobDTO> GetRecomendedJobs(
+		        @Param("skillNames") Set<String> skillNames,
+		        @Param("preferredLocations") Set<String> preferredLocations,
+		        @Param("experience") Integer experience,
+		        @Param("specialization") String specialization,
+		        @Param("appliedJobIds") Set<Long> appliedJobIds,
+		        @Param("savedJobIds") Set<Long> savedJobIds,
+		        Pageable pageable);
+
+
+	
 
 	@Query("SELECT DISTINCT j.id " + "FROM Job j " + "LEFT JOIN j.skillsRequired s " + // Keep skills join but optimize
 																						// filtering
@@ -120,5 +179,8 @@ public interface JobRepository extends JpaRepository<Job, Long>, JpaSpecificatio
 			@Param("preferredLocations") Set<String> preferredLocations,
 			@Param("experience") Integer experience,
 			@Param("specialization") String specialization);
+
+
+
 
 }

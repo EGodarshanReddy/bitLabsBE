@@ -23,6 +23,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+
+import com.talentstream.dto.GetJobDTO;
 import com.talentstream.dto.JobDTO;
 import com.talentstream.dto.ScheduleInterviewDTO;
 import com.talentstream.entity.Alerts;
@@ -90,19 +92,23 @@ public class ApplyJobController {
 	}
 
 	@GetMapping("/getAppliedJobs/{applicantId}")
-	public ResponseEntity<List<JobDTO>> getAppliedJobsForApplicant(
+	public ResponseEntity<List<GetJobDTO>> getAppliedJobsForApplicant(
 			@PathVariable long applicantId,
 			@RequestParam(defaultValue = "0") int page,
 			@RequestParam(defaultValue = "10") int size) {
 
 		try {
 			logger.info("Request received to get applied jobs for applicantId: {}", applicantId);
-			Page<JobDTO> appliedJobsPage = applyJobService.getAppliedJobsForApplicant(applicantId, page, size);
+			Page<GetJobDTO> appliedJobsPage = applyJobService.getAppliedJobsForApplicant(applicantId, page, size);
 
 			if (appliedJobsPage.isEmpty()) {
 				logger.info("No applied jobs found for applicantId: {}", applicantId);
 				return ResponseEntity.noContent().build();
 			}
+			 List<GetJobDTO> savedJobsDTOList = appliedJobsPage.stream().map(job -> {
+	            	GetJobDTO jobDTO = modelMapper.map(job, GetJobDTO.class);               
+	                return jobDTO;
+	            }).collect(Collectors.toList()); // Convert stream to list
 
 			logger.info("Retrieved applied jobs successfully for applicantId: {}", applicantId);
 			return ResponseEntity.ok(appliedJobsPage.getContent()); // Extract List from Page

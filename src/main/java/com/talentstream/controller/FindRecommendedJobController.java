@@ -2,9 +2,9 @@ package com.talentstream.controller;
 
 import java.util.Collections;
 import java.util.List;
-import java.util.Set;
-import java.util.stream.Collectors;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -14,17 +14,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.talentstream.dto.GetJobDTO;
 import com.talentstream.dto.JobDTO;
-import com.talentstream.dto.RecuriterSkillsDTO;
-import com.talentstream.entity.ApplicantProfile;
-import com.talentstream.entity.Job;
-import com.talentstream.entity.RecuriterSkills;
 import com.talentstream.exception.CustomException;
 import com.talentstream.repository.ApplicantProfileRepository;
 import com.talentstream.service.CompanyLogoService;
 import com.talentstream.service.FinRecommendedJobService;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 @RestController
 @RequestMapping("/recommendedjob")
@@ -43,13 +38,13 @@ public class FindRecommendedJobController {
     }
 
     @GetMapping("/findrecommendedjob/{applicantId}")
-    public ResponseEntity<List<JobDTO>> recommendJobsForApplicant(
+    public ResponseEntity<List<GetJobDTO>> recommendJobsForApplicant(
             @PathVariable String applicantId,
             @RequestParam(defaultValue = "0") int page,
             @RequestParam(defaultValue = "16") int size) {
         try {
             long applicantIdLong = Long.parseLong(applicantId);
-            List<JobDTO> recommendedJobs = finJobService.recommendJobsForApplicant(applicantIdLong, page, size);
+            List<GetJobDTO> recommendedJobs = finJobService.recommendJobsForApplicant(applicantIdLong, page, size);
 
             if (!recommendedJobs.isEmpty()) {
                 return ResponseEntity.ok(recommendedJobs);

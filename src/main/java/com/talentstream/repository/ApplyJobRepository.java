@@ -10,10 +10,11 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
+import com.talentstream.dto.GetJobDTO;
+import com.talentstream.entity.Applicant;
 import com.talentstream.entity.AppliedApplicantInfo;
 import com.talentstream.entity.ApplyJob;
 import com.talentstream.entity.Job;
-import com.talentstream.entity.Applicant;
 
 @Repository
 public interface ApplyJobRepository extends JpaRepository<ApplyJob, Long> {
@@ -81,7 +82,17 @@ public interface ApplyJobRepository extends JpaRepository<ApplyJob, Long> {
 	@Query("SELECT aj.job.id FROM ApplyJob aj WHERE aj.applicant.id = :applicantId")
 
 	Set<Long> findJobIdsByApplicantId(@Param("applicantId") long applicantId);
+//	@Query("SELECT new com.talentstream.dto.GetJobDTO(aj.job.id, aj.job.minimumExperience, aj.job.maximumExperience, aj.job.jobTitle, aj.job.minSalary, aj.job.maxSalary, aj.job.employeeType, aj.job.industryType, aj.job.creationDate,aj.job.location, aj.job.jobRecruiter.companyname) FROM ApplyJob aj WHERE aj.applicant.id = :applicantId ORDER BY aj.job.id ASC")
+//	Page<GetJobDTO> findByApplicantId(@Param("applicantId") long applicantId, Pageable pageable);
+	
+	@Query("SELECT new com.talentstream.dto.GetJobDTO(" +
+		       "aj.job.id, aj.job.minimumExperience, aj.job.maximumExperience, aj.job.jobTitle, " +
+		       "aj.job.minSalary, aj.job.maxSalary, aj.job.employeeType, aj.job.industryType, " +
+		       "aj.job.creationDate, aj.job.location, aj.job.jobRecruiter.companyname) " +
+		       "FROM ApplyJob aj " +
+		       "WHERE aj.applicant.id = :applicantId " +
+		       "ORDER BY aj.job.id ASC")
+		Page<GetJobDTO> findByApplicantId(@Param("applicantId") long applicantId, Pageable pageable);
 
-	Page<ApplyJob> findByApplicantId(long applicantId, Pageable pageable);
 
 }

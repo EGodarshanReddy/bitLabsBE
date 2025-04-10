@@ -4,7 +4,7 @@ import java.time.LocalDate;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 
-public class GetSavedJobDTO 
+public class GetJobDTO 
 {
 	  private Long id;
 	    private int minimumExperience;
@@ -14,12 +14,14 @@ public class GetSavedJobDTO
 	    private double maxSalary;
 	    private String employeeType;
 	    private String industryType;
-	    
-	    @JsonFormat(pattern = "yyyy-MM-dd")
+	    private String location;
+		@JsonFormat(pattern = "yyyy-MM-dd")
 	    private LocalDate creationDate;
-	    public GetSavedJobDTO(Long id, int minimumExperience, int maximumExperience, String jobTitle, double minSalary,
-				double maxSalary, String employeeType, String industryType, LocalDate creationDate,
-				String companyName) {
+		private String companyname;	
+	   
+		public GetJobDTO(Long id, int minimumExperience, int maximumExperience, String jobTitle, double minSalary,
+				double maxSalary, String employeeType, String industryType,  LocalDate creationDate,String location,
+				String companyname) {
 			super();
 			this.id = id;
 			this.minimumExperience = minimumExperience;
@@ -29,19 +31,20 @@ public class GetSavedJobDTO
 			this.maxSalary = maxSalary;
 			this.employeeType = employeeType;
 			this.industryType = industryType;
+			this.location = location;
 			this.creationDate = creationDate;
-			this.companyName = companyName;
+			this.companyname = companyname;
 		}
 
-		public String getCompanyName() {
-			return companyName;
+		public String getCompanyname() {
+			return companyname;
 		}
 
-		public void setCompanyName(String companyName) {
-			this.companyName = companyName;
+		public void setCompanyname(String companyname) {
+			this.companyname = companyname;
 		}
 
-		private String companyName;
+		
 	    // Getters and Setters
 	    public Long getId() {
 	        return id;
@@ -114,6 +117,14 @@ public class GetSavedJobDTO
 	    public void setCreationDate(LocalDate creationDate) {
 	        this.creationDate = creationDate;
 	    }
+
+		public String getLocation() {
+			return location;
+		}
+
+		public void setLocation(String location) {
+			this.location = location;
+		}
 
 	   
 		

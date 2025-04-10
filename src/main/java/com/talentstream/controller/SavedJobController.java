@@ -19,8 +19,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.talentstream.dto.GetSavedJobDTO;
-import com.talentstream.dto.JobDTO;
+import com.talentstream.dto.GetJobDTO;
 import com.talentstream.exception.CustomException;
 import com.talentstream.service.CompanyLogoService;
 import com.talentstream.service.SavedJobService;
@@ -50,19 +49,19 @@ public class SavedJobController {
     }
 
     @GetMapping("/getSavedJobs/{applicantId}")
-    public ResponseEntity<List<GetSavedJobDTO>> getSavedJobsForApplicantAndJob(
+    public ResponseEntity<List<GetJobDTO>> getSavedJobsForApplicantAndJob(
             @PathVariable long applicantId,
             @RequestParam(defaultValue = "0") int page,
             @RequestParam(defaultValue = "10") int size) {
         try {
-            Page<GetSavedJobDTO> savedJobsPage = savedJobService.getSavedJobsForApplicant(applicantId, page, size);
+            Page<GetJobDTO> savedJobsPage = savedJobService.getSavedJobsForApplicant(applicantId, page, size);
 
             if (savedJobsPage.isEmpty()) {
                 return ResponseEntity.noContent().build();
             }
 
-            List<GetSavedJobDTO> savedJobsDTOList = savedJobsPage.stream().map(job -> {
-            	GetSavedJobDTO jobDTO = modelMapper.map(job, GetSavedJobDTO.class);               
+            List<GetJobDTO> savedJobsDTOList = savedJobsPage.stream().map(job -> {
+            	GetJobDTO jobDTO = modelMapper.map(job, GetJobDTO.class);               
                 return jobDTO;
             }).collect(Collectors.toList()); // Convert stream to list
 
