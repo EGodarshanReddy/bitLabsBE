@@ -6,3 +6,4 @@ COPY --from=build /target/docker-spring-boot.jar TalentTrack.jar
 # ENV PORT=8080
 EXPOSE 8080
 ENTRYPOINT ["java","-jar","TalentTrack.jar"]
+ 
