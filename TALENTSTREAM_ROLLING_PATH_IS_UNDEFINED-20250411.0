@@ -1,0 +1,741 @@
+11-04-2025_15:35:37.990{UTC}|report-tool|INFO ||o.h.v.i.u.Version|HV000001: Hibernate Validator 6.2.5.Final
+11-04-2025_15:35:38.085{UTC}|report-tool|INFO ||c.t.TalentStreamApplication|Starting TalentStreamApplication using Java 21.0.5 on DESKTOP-VKRMBR2 with PID 8260 (C:\Users\Administrator\GodarshanReddy\TalentStreamBE\target\classes started by Administrator in C:\Users\Administrator\GodarshanReddy\TalentStreamBE)
+11-04-2025_15:35:38.086{UTC}|report-tool|DEBUG||c.t.TalentStreamApplication|Running with Spring Boot v2.7.9, Spring v5.3.25
+11-04-2025_15:35:38.087{UTC}|report-tool|INFO ||c.t.TalentStreamApplication|No active profile set, falling back to 1 default profile: "default"
+11-04-2025_15:35:48.940{UTC}|report-tool|INFO ||o.s.d.r.c.RepositoryConfigurationDelegate|Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+11-04-2025_15:35:49.757{UTC}|report-tool|INFO ||o.s.d.r.c.RepositoryConfigurationDelegate|Finished Spring Data repository scanning in 773 ms. Found 25 JPA repository interfaces.
+11-04-2025_15:35:52.137{UTC}|report-tool|INFO ||o.s.b.w.e.t.TomcatWebServer|Tomcat initialized with port(s): 8081 (http)
+11-04-2025_15:35:52.143{UTC}|report-tool|INFO ||o.a.c.c.AprLifecycleListener|Loaded Apache Tomcat Native library [2.0.8] using APR version [1.7.4].
+11-04-2025_15:35:52.144{UTC}|report-tool|INFO ||o.a.c.c.AprLifecycleListener|APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+11-04-2025_15:35:52.145{UTC}|report-tool|INFO ||o.a.c.c.AprLifecycleListener|APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+11-04-2025_15:35:52.188{UTC}|report-tool|INFO ||o.a.c.c.AprLifecycleListener|OpenSSL successfully initialized [OpenSSL 3.0.14 4 Jun 2024]
+11-04-2025_15:35:52.221{UTC}|report-tool|INFO ||o.a.c.h.Http11NioProtocol|Initializing ProtocolHandler ["http-nio-8081"]
+11-04-2025_15:35:52.223{UTC}|report-tool|INFO ||o.a.c.c.StandardService|Starting service [Tomcat]
+11-04-2025_15:35:52.224{UTC}|report-tool|INFO ||o.a.c.c.StandardEngine|Starting Servlet engine: [Apache Tomcat/9.0.71]
+11-04-2025_15:35:52.671{UTC}|report-tool|INFO ||o.a.c.c.C.[.[.[/]|Initializing Spring embedded WebApplicationContext
+11-04-2025_15:35:52.672{UTC}|report-tool|INFO ||o.s.b.w.s.c.ServletWebServerApplicationContext|Root WebApplicationContext: initialization completed in 14359 ms
+11-04-2025_15:35:53.269{UTC}|report-tool|INFO ||o.h.j.i.u.LogHelper|HHH000204: Processing PersistenceUnitInfo [name: default]
+11-04-2025_15:35:53.488{UTC}|report-tool|INFO ||o.h.Version|HHH000412: Hibernate ORM core version 5.6.15.Final
+11-04-2025_15:35:54.052{UTC}|report-tool|INFO ||o.h.a.c.Version|HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+11-04-2025_15:35:54.395{UTC}|report-tool|INFO ||c.z.h.HikariDataSource|HikariPool-1 - Starting...
+11-04-2025_15:35:56.019{UTC}|report-tool|INFO ||c.z.h.HikariDataSource|HikariPool-1 - Start completed.
+11-04-2025_15:35:56.085{UTC}|report-tool|INFO ||o.h.d.Dialect|HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+11-04-2025_15:36:06.494{UTC}|report-tool|INFO ||o.h.e.t.j.p.i.JtaPlatformInitiator|HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+11-04-2025_15:36:06.515{UTC}|report-tool|INFO ||o.s.o.j.LocalContainerEntityManagerFactoryBean|Initialized JPA EntityManagerFactory for persistence unit 'default'
+11-04-2025_15:36:07.260{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|Filter 'jwtRequestFilter' configured for use
+11-04-2025_15:36:07.332{UTC}|report-tool|WARN ||o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration|spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+11-04-2025_15:36:08.048{UTC}|report-tool|INFO ||o.s.d.p.DefaultProjectionInformation$PropertyDescriptorSource|Couldn't read class metadata for interface java.util.Map. Input property calculation might fail
+11-04-2025_15:36:08.094{UTC}|report-tool|DEBUG||c.t.c.ApplicantProfileController|ApplicantProfileController initialized
+11-04-2025_15:36:09.806{UTC}|report-tool|INFO ||o.s.s.w.DefaultSecurityFilterChain|Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@751eb9a9, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@749ebc39, org.springframework.security.web.context.SecurityContextPersistenceFilter@5135b8a3, org.springframework.security.web.header.HeaderWriterFilter@55a8f92d, org.springframework.security.web.authentication.logout.LogoutFilter@17f4276b, com.talentstream.filter.JwtRequestFilter@5889e697, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7dd3f20e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7424a39e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7dc6ce7d, org.springframework.security.web.session.SessionManagementFilter@4eba3c3f, org.springframework.security.web.access.ExceptionTranslationFilter@73c25e8, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@126320a8]
+11-04-2025_15:36:10.106{UTC}|report-tool|INFO ||o.a.c.h.Http11NioProtocol|Starting ProtocolHandler ["http-nio-8081"]
+11-04-2025_15:36:10.134{UTC}|report-tool|INFO ||o.s.b.w.e.t.TomcatWebServer|Tomcat started on port(s): 8081 (http) with context path ''
+11-04-2025_15:36:11.615{UTC}|report-tool|INFO ||c.t.TalentStreamApplication|Started TalentStreamApplication in 35.532 seconds (JVM running for 39.764)
+11-04-2025_15:36:11.786{UTC}|report-tool|INFO ||o.a.c.c.C.[.[.[/]|Initializing Spring DispatcherServlet 'dispatcherServlet'
+11-04-2025_15:36:11.786{UTC}|report-tool|INFO ||o.s.w.s.DispatcherServlet|Initializing Servlet 'dispatcherServlet'
+11-04-2025_15:36:11.790{UTC}|report-tool|INFO ||o.s.w.s.DispatcherServlet|Completed initialization in 3 ms
+11-04-2025_15:36:11.811{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|Authorization Header: null
+11-04-2025_15:36:11.811{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|JWT: null
+11-04-2025_15:36:11.811{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|Username: null
+11-04-2025_15:36:11.881{UTC}|report-tool|INFO ||c.t.u.ResponseSizeLogger|API [/health] response size: 26 bytes (~0.03 KB)
+11-04-2025_15:36:35.842{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|Authorization Header: 
+11-04-2025_15:36:35.846{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|JWT: null
+11-04-2025_15:36:35.846{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|Username: null
+11-04-2025_15:36:36.091{UTC}|report-tool|INFO ||c.t.c.ApplicantProfileController|Attempting to login with email: godarshanreddy@gmail.com
+11-04-2025_15:36:36.091{UTC}|report-tool|DEBUG||c.t.c.ApplicantProfileController|Handling Google Sign-In for email: godarshanreddy@gmail.com
+11-04-2025_15:36:36.266{UTC}|report-tool|DEBUG||c.t.c.ApplicantProfileController|Google Sign-In successful for: godarshanreddy@gmail.com
+11-04-2025_15:36:36.659{UTC}|report-tool|INFO ||c.t.u.ResponseSizeLogger|API [/applicant/applicantLogin] response size: 361 bytes (~0.35 KB)
+11-04-2025_15:36:36.802{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|Authorization Header: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnb2RhcnNoYW5yZWRkeUBnbWFpbC5jb20iLCJleHAiOjE3NDQ0MDE5OTYsImlhdCI6MTc0NDM2NTk5Nn0.mc6Q3G3eCiLnh0rDSi0euGmPbB_t-TPl-ID0fmUCWPM
+11-04-2025_15:36:36.802{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|JWT: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnb2RhcnNoYW5yZWRkeUBnbWFpbC5jb20iLCJleHAiOjE3NDQ0MDE5OTYsImlhdCI6MTc0NDM2NTk5Nn0.mc6Q3G3eCiLnh0rDSi0euGmPbB_t-TPl-ID0fmUCWPM
+11-04-2025_15:36:36.802{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|Username: godarshanreddy@gmail.com
+11-04-2025_15:36:36.966{UTC}|report-tool|INFO ||c.t.u.ResponseSizeLogger|API [/api/activity/log] response size: 39 bytes (~0.04 KB)
+11-04-2025_15:36:36.982{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|Authorization Header: null
+11-04-2025_15:36:36.987{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|JWT: null
+11-04-2025_15:36:36.987{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|Username: null
+11-04-2025_15:36:38.020{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|Authorization Header: null
+11-04-2025_15:36:38.020{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|JWT: null
+11-04-2025_15:36:38.022{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|Username: null
+11-04-2025_15:36:40.049{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|Authorization Header: null
+11-04-2025_15:36:40.049{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|JWT: null
+11-04-2025_15:36:40.049{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|Username: null
+11-04-2025_15:36:40.197{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|Authorization Header: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnb2RhcnNoYW5yZWRkeUBnbWFpbC5jb20iLCJleHAiOjE3NDQ0MDE5OTYsImlhdCI6MTc0NDM2NTk5Nn0.mc6Q3G3eCiLnh0rDSi0euGmPbB_t-TPl-ID0fmUCWPM
+11-04-2025_15:36:40.199{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|JWT: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnb2RhcnNoYW5yZWRkeUBnbWFpbC5jb20iLCJleHAiOjE3NDQ0MDE5OTYsImlhdCI6MTc0NDM2NTk5Nn0.mc6Q3G3eCiLnh0rDSi0euGmPbB_t-TPl-ID0fmUCWPM
+11-04-2025_15:36:40.199{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|Username: godarshanreddy@gmail.com
+11-04-2025_15:36:40.213{UTC}|report-tool|DEBUG||c.t.c.ApplicantProfileController|Fetching profile ID for applicantId: 89
+11-04-2025_15:36:40.364{UTC}|report-tool|INFO ||c.t.u.ResponseSizeLogger|API [/applicantprofile/89/profileid] response size: 1 bytes (~0.00 KB)
+11-04-2025_15:36:40.381{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|Authorization Header: null
+11-04-2025_15:36:40.381{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|JWT: null
+11-04-2025_15:36:40.381{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|Username: null
+11-04-2025_15:36:40.552{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|Authorization Header: null
+11-04-2025_15:36:40.552{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|JWT: null
+11-04-2025_15:36:40.552{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|Username: null
+11-04-2025_15:36:40.647{UTC}|report-tool|INFO ||c.t.u.ResponseSizeLogger|API [/applicant/getApplicantById/89] response size: 336 bytes (~0.33 KB)
+11-04-2025_15:36:40.676{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|Authorization Header: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnb2RhcnNoYW5yZWRkeUBnbWFpbC5jb20iLCJleHAiOjE3NDQ0MDE5OTYsImlhdCI6MTc0NDM2NTk5Nn0.mc6Q3G3eCiLnh0rDSi0euGmPbB_t-TPl-ID0fmUCWPM
+11-04-2025_15:36:40.679{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|JWT: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnb2RhcnNoYW5yZWRkeUBnbWFpbC5jb20iLCJleHAiOjE3NDQ0MDE5OTYsImlhdCI6MTc0NDM2NTk5Nn0.mc6Q3G3eCiLnh0rDSi0euGmPbB_t-TPl-ID0fmUCWPM
+11-04-2025_15:36:40.676{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|Authorization Header: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnb2RhcnNoYW5yZWRkeUBnbWFpbC5jb20iLCJleHAiOjE3NDQ0MDE5OTYsImlhdCI6MTc0NDM2NTk5Nn0.mc6Q3G3eCiLnh0rDSi0euGmPbB_t-TPl-ID0fmUCWPM
+11-04-2025_15:36:40.679{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|Username: godarshanreddy@gmail.com
+11-04-2025_15:36:40.679{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|JWT: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnb2RhcnNoYW5yZWRkeUBnbWFpbC5jb20iLCJleHAiOjE3NDQ0MDE5OTYsImlhdCI6MTc0NDM2NTk5Nn0.mc6Q3G3eCiLnh0rDSi0euGmPbB_t-TPl-ID0fmUCWPM
+11-04-2025_15:36:40.679{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|Username: godarshanreddy@gmail.com
+11-04-2025_15:36:40.682{UTC}|report-tool|INFO ||c.t.c.ApplyJobController|Request received to get unread alert count for applicant 89
+11-04-2025_15:36:40.690{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|Authorization Header: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnb2RhcnNoYW5yZWRkeUBnbWFpbC5jb20iLCJleHAiOjE3NDQ0MDE5OTYsImlhdCI6MTc0NDM2NTk5Nn0.mc6Q3G3eCiLnh0rDSi0euGmPbB_t-TPl-ID0fmUCWPM
+11-04-2025_15:36:40.690{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|JWT: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnb2RhcnNoYW5yZWRkeUBnbWFpbC5jb20iLCJleHAiOjE3NDQ0MDE5OTYsImlhdCI6MTc0NDM2NTk5Nn0.mc6Q3G3eCiLnh0rDSi0euGmPbB_t-TPl-ID0fmUCWPM
+11-04-2025_15:36:40.690{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|Username: godarshanreddy@gmail.com
+11-04-2025_15:36:40.690{UTC}|report-tool|DEBUG||c.t.c.ApplicantProfileController|Fetching profile view for applicantId: 89
+11-04-2025_15:36:40.695{UTC}|report-tool|WARN ||c.t.u.ResponseSizeLogger|Failed to log response size
+com.fasterxml.jackson.databind.exc.InvalidDefinitionException: No serializer found for class java.io.ByteArrayInputStream and no properties discovered to create BeanSerializer (to avoid exception, disable SerializationFeature.FAIL_ON_EMPTY_BEANS) (through reference chain: org.springframework.core.io.InputStreamResource["inputStream"])
+	at com.fasterxml.jackson.databind.exc.InvalidDefinitionException.from(InvalidDefinitionException.java:77)
+	at com.fasterxml.jackson.databind.SerializerProvider.reportBadDefinition(SerializerProvider.java:1300)
+	at com.fasterxml.jackson.databind.DatabindContext.reportBadDefinition(DatabindContext.java:400)
+	at com.fasterxml.jackson.databind.ser.impl.UnknownSerializer.failForEmpty(UnknownSerializer.java:46)
+	at com.fasterxml.jackson.databind.ser.impl.UnknownSerializer.serialize(UnknownSerializer.java:29)
+	at com.fasterxml.jackson.databind.ser.BeanPropertyWriter.serializeAsField(BeanPropertyWriter.java:728)
+	at com.fasterxml.jackson.databind.ser.std.BeanSerializerBase.serializeFields(BeanSerializerBase.java:774)
+	at com.fasterxml.jackson.databind.ser.BeanSerializer.serialize(BeanSerializer.java:178)
+	at com.fasterxml.jackson.databind.ser.DefaultSerializerProvider._serialize(DefaultSerializerProvider.java:480)
+	at com.fasterxml.jackson.databind.ser.DefaultSerializerProvider.serializeValue(DefaultSerializerProvider.java:319)
+	at com.fasterxml.jackson.databind.ObjectMapper._writeValueAndClose(ObjectMapper.java:4568)
+	at com.fasterxml.jackson.databind.ObjectMapper.writeValueAsString(ObjectMapper.java:3821)
+	at com.talentstream.util.ResponseSizeLogger.beforeBodyWrite(ResponseSizeLogger.java:37)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyAdviceChain.processBody(RequestResponseBodyAdviceChain.java:141)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyAdviceChain.beforeBodyWrite(RequestResponseBodyAdviceChain.java:116)
+	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodProcessor.writeWithMessageConverters(AbstractMessageConverterMethodProcessor.java:281)
+	at org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor.handleReturnValue(HttpEntityMethodProcessor.java:219)
+	at org.springframework.web.method.support.HandlerMethodReturnValueHandlerComposite.handleReturnValue(HandlerMethodReturnValueHandlerComposite.java:78)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:135)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1071)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:964)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:670)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:779)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:111)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:337)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:115)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:122)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:126)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:109)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:149)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at com.talentstream.filter.JwtRequestFilter.doFilterInternal(JwtRequestFilter.java:108)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:112)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:82)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:221)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:186)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:177)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:891)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1784)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+11-04-2025_15:36:40.700{UTC}|report-tool|ERROR||o.a.c.c.C.[.[.[.[dispatcherServlet]|Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.IllegalStateException: InputStream has already been read - do not use InputStreamResource if a stream needs to be read multiple times] with root cause
+java.lang.IllegalStateException: InputStream has already been read - do not use InputStreamResource if a stream needs to be read multiple times
+	at org.springframework.core.io.InputStreamResource.getInputStream(InputStreamResource.java:97)
+	at org.springframework.http.converter.ResourceHttpMessageConverter.writeContent(ResourceHttpMessageConverter.java:137)
+	at org.springframework.http.converter.ResourceHttpMessageConverter.writeInternal(ResourceHttpMessageConverter.java:129)
+	at org.springframework.http.converter.ResourceHttpMessageConverter.writeInternal(ResourceHttpMessageConverter.java:45)
+	at org.springframework.http.converter.AbstractHttpMessageConverter.write(AbstractHttpMessageConverter.java:227)
+	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodProcessor.writeWithMessageConverters(AbstractMessageConverterMethodProcessor.java:293)
+	at org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor.handleReturnValue(HttpEntityMethodProcessor.java:219)
+	at org.springframework.web.method.support.HandlerMethodReturnValueHandlerComposite.handleReturnValue(HandlerMethodReturnValueHandlerComposite.java:78)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:135)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1071)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:964)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:670)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:779)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:111)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:337)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:115)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:122)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:126)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:109)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:149)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at com.talentstream.filter.JwtRequestFilter.doFilterInternal(JwtRequestFilter.java:108)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:112)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:82)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:221)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:186)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:177)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:891)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1784)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+11-04-2025_15:36:40.711{UTC}|report-tool|INFO ||c.t.u.ResponseSizeLogger|API [/error] response size: 110 bytes (~0.11 KB)
+11-04-2025_15:36:40.724{UTC}|report-tool|INFO ||c.t.c.ApplyJobController|Retrieved unread alert count successfully for applicant 89: 0
+11-04-2025_15:36:40.724{UTC}|report-tool|INFO ||c.t.u.ResponseSizeLogger|API [/applyjob/applicants/89/unread-alert-count] response size: 1 bytes (~0.00 KB)
+11-04-2025_15:36:40.726{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|Authorization Header: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnb2RhcnNoYW5yZWRkeUBnbWFpbC5jb20iLCJleHAiOjE3NDQ0MDE5OTYsImlhdCI6MTc0NDM2NTk5Nn0.mc6Q3G3eCiLnh0rDSi0euGmPbB_t-TPl-ID0fmUCWPM
+11-04-2025_15:36:40.726{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|JWT: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnb2RhcnNoYW5yZWRkeUBnbWFpbC5jb20iLCJleHAiOjE3NDQ0MDE5OTYsImlhdCI6MTc0NDM2NTk5Nn0.mc6Q3G3eCiLnh0rDSi0euGmPbB_t-TPl-ID0fmUCWPM
+11-04-2025_15:36:40.726{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|Username: godarshanreddy@gmail.com
+11-04-2025_15:36:40.728{UTC}|report-tool|DEBUG||c.t.c.ApplicantProfileController|Fetching profile ID for applicantId: 89
+11-04-2025_15:36:40.737{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|Authorization Header: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnb2RhcnNoYW5yZWRkeUBnbWFpbC5jb20iLCJleHAiOjE3NDQ0MDE5OTYsImlhdCI6MTc0NDM2NTk5Nn0.mc6Q3G3eCiLnh0rDSi0euGmPbB_t-TPl-ID0fmUCWPM
+11-04-2025_15:36:40.737{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|JWT: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnb2RhcnNoYW5yZWRkeUBnbWFpbC5jb20iLCJleHAiOjE3NDQ0MDE5OTYsImlhdCI6MTc0NDM2NTk5Nn0.mc6Q3G3eCiLnh0rDSi0euGmPbB_t-TPl-ID0fmUCWPM
+11-04-2025_15:36:40.737{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|Username: godarshanreddy@gmail.com
+11-04-2025_15:36:40.741{UTC}|report-tool|INFO ||c.t.c.ApplyJobController|Request received to count applied jobs for applicantId: 89
+11-04-2025_15:36:40.753{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|Authorization Header: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnb2RhcnNoYW5yZWRkeUBnbWFpbC5jb20iLCJleHAiOjE3NDQ0MDE5OTYsImlhdCI6MTc0NDM2NTk5Nn0.mc6Q3G3eCiLnh0rDSi0euGmPbB_t-TPl-ID0fmUCWPM
+11-04-2025_15:36:40.753{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|JWT: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnb2RhcnNoYW5yZWRkeUBnbWFpbC5jb20iLCJleHAiOjE3NDQ0MDE5OTYsImlhdCI6MTc0NDM2NTk5Nn0.mc6Q3G3eCiLnh0rDSi0euGmPbB_t-TPl-ID0fmUCWPM
+11-04-2025_15:36:40.753{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|Username: godarshanreddy@gmail.com
+11-04-2025_15:36:40.758{UTC}|report-tool|INFO ||c.t.c.FindRecommendedJobController|Count of recommended jobs for applicant {} retrieved successfully: {}
+11-04-2025_15:36:40.789{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|Authorization Header: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnb2RhcnNoYW5yZWRkeUBnbWFpbC5jb20iLCJleHAiOjE3NDQ0MDE5OTYsImlhdCI6MTc0NDM2NTk5Nn0.mc6Q3G3eCiLnh0rDSi0euGmPbB_t-TPl-ID0fmUCWPM
+11-04-2025_15:36:40.789{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|JWT: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnb2RhcnNoYW5yZWRkeUBnbWFpbC5jb20iLCJleHAiOjE3NDQ0MDE5OTYsImlhdCI6MTc0NDM2NTk5Nn0.mc6Q3G3eCiLnh0rDSi0euGmPbB_t-TPl-ID0fmUCWPM
+11-04-2025_15:36:40.789{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|Username: godarshanreddy@gmail.com
+11-04-2025_15:36:40.793{UTC}|report-tool|INFO ||c.t.u.ResponseSizeLogger|API [/applicantprofile/89/profileid] response size: 1 bytes (~0.00 KB)
+11-04-2025_15:36:40.801{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|Authorization Header: null
+11-04-2025_15:36:40.801{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|JWT: null
+11-04-2025_15:36:40.801{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|Username: null
+11-04-2025_15:36:40.805{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|Authorization Header: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnb2RhcnNoYW5yZWRkeUBnbWFpbC5jb20iLCJleHAiOjE3NDQ0MDE5OTYsImlhdCI6MTc0NDM2NTk5Nn0.mc6Q3G3eCiLnh0rDSi0euGmPbB_t-TPl-ID0fmUCWPM
+11-04-2025_15:36:40.805{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|JWT: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnb2RhcnNoYW5yZWRkeUBnbWFpbC5jb20iLCJleHAiOjE3NDQ0MDE5OTYsImlhdCI6MTc0NDM2NTk5Nn0.mc6Q3G3eCiLnh0rDSi0euGmPbB_t-TPl-ID0fmUCWPM
+11-04-2025_15:36:40.805{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|Username: godarshanreddy@gmail.com
+11-04-2025_15:36:40.826{UTC}|report-tool|INFO ||c.t.c.ApplyJobController|Counted applied jobs successfully for applicantId: 89
+11-04-2025_15:36:40.826{UTC}|report-tool|INFO ||c.t.u.ResponseSizeLogger|API [/applyjob/countAppliedJobs/89] response size: 1 bytes (~0.00 KB)
+11-04-2025_15:36:40.857{UTC}|report-tool|INFO ||c.t.c.ApplicantProfileController|Profile view fetched successfully for applicantId: 89
+11-04-2025_15:36:40.868{UTC}|report-tool|INFO ||c.t.u.ResponseSizeLogger|API [/applicant/getApplicantById/89] response size: 336 bytes (~0.33 KB)
+11-04-2025_15:36:40.898{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|Authorization Header: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnb2RhcnNoYW5yZWRkeUBnbWFpbC5jb20iLCJleHAiOjE3NDQ0MDE5OTYsImlhdCI6MTc0NDM2NTk5Nn0.mc6Q3G3eCiLnh0rDSi0euGmPbB_t-TPl-ID0fmUCWPM
+11-04-2025_15:36:40.898{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|JWT: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnb2RhcnNoYW5yZWRkeUBnbWFpbC5jb20iLCJleHAiOjE3NDQ0MDE5OTYsImlhdCI6MTc0NDM2NTk5Nn0.mc6Q3G3eCiLnh0rDSi0euGmPbB_t-TPl-ID0fmUCWPM
+11-04-2025_15:36:40.898{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|Username: godarshanreddy@gmail.com
+11-04-2025_15:36:40.900{UTC}|report-tool|WARN ||c.t.u.ResponseSizeLogger|Failed to log response size
+com.fasterxml.jackson.databind.exc.InvalidDefinitionException: No serializer found for class java.io.ByteArrayInputStream and no properties discovered to create BeanSerializer (to avoid exception, disable SerializationFeature.FAIL_ON_EMPTY_BEANS) (through reference chain: org.springframework.core.io.InputStreamResource["inputStream"])
+	at com.fasterxml.jackson.databind.exc.InvalidDefinitionException.from(InvalidDefinitionException.java:77)
+	at com.fasterxml.jackson.databind.SerializerProvider.reportBadDefinition(SerializerProvider.java:1300)
+	at com.fasterxml.jackson.databind.DatabindContext.reportBadDefinition(DatabindContext.java:400)
+	at com.fasterxml.jackson.databind.ser.impl.UnknownSerializer.failForEmpty(UnknownSerializer.java:46)
+	at com.fasterxml.jackson.databind.ser.impl.UnknownSerializer.serialize(UnknownSerializer.java:29)
+	at com.fasterxml.jackson.databind.ser.BeanPropertyWriter.serializeAsField(BeanPropertyWriter.java:728)
+	at com.fasterxml.jackson.databind.ser.std.BeanSerializerBase.serializeFields(BeanSerializerBase.java:774)
+	at com.fasterxml.jackson.databind.ser.BeanSerializer.serialize(BeanSerializer.java:178)
+	at com.fasterxml.jackson.databind.ser.DefaultSerializerProvider._serialize(DefaultSerializerProvider.java:480)
+	at com.fasterxml.jackson.databind.ser.DefaultSerializerProvider.serializeValue(DefaultSerializerProvider.java:319)
+	at com.fasterxml.jackson.databind.ObjectMapper._writeValueAndClose(ObjectMapper.java:4568)
+	at com.fasterxml.jackson.databind.ObjectMapper.writeValueAsString(ObjectMapper.java:3821)
+	at com.talentstream.util.ResponseSizeLogger.beforeBodyWrite(ResponseSizeLogger.java:37)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyAdviceChain.processBody(RequestResponseBodyAdviceChain.java:141)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyAdviceChain.beforeBodyWrite(RequestResponseBodyAdviceChain.java:116)
+	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodProcessor.writeWithMessageConverters(AbstractMessageConverterMethodProcessor.java:281)
+	at org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor.handleReturnValue(HttpEntityMethodProcessor.java:219)
+	at org.springframework.web.method.support.HandlerMethodReturnValueHandlerComposite.handleReturnValue(HandlerMethodReturnValueHandlerComposite.java:78)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:135)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1071)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:964)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:670)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:779)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:111)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:337)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:115)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:122)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:126)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:109)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:149)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at com.talentstream.filter.JwtRequestFilter.doFilterInternal(JwtRequestFilter.java:108)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:112)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:82)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:221)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:186)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:177)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:891)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1784)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+11-04-2025_15:36:40.900{UTC}|report-tool|ERROR||o.a.c.c.C.[.[.[.[dispatcherServlet]|Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.IllegalStateException: InputStream has already been read - do not use InputStreamResource if a stream needs to be read multiple times] with root cause
+java.lang.IllegalStateException: InputStream has already been read - do not use InputStreamResource if a stream needs to be read multiple times
+	at org.springframework.core.io.InputStreamResource.getInputStream(InputStreamResource.java:97)
+	at org.springframework.http.converter.ResourceHttpMessageConverter.writeContent(ResourceHttpMessageConverter.java:137)
+	at org.springframework.http.converter.ResourceHttpMessageConverter.writeInternal(ResourceHttpMessageConverter.java:129)
+	at org.springframework.http.converter.ResourceHttpMessageConverter.writeInternal(ResourceHttpMessageConverter.java:45)
+	at org.springframework.http.converter.AbstractHttpMessageConverter.write(AbstractHttpMessageConverter.java:227)
+	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodProcessor.writeWithMessageConverters(AbstractMessageConverterMethodProcessor.java:293)
+	at org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor.handleReturnValue(HttpEntityMethodProcessor.java:219)
+	at org.springframework.web.method.support.HandlerMethodReturnValueHandlerComposite.handleReturnValue(HandlerMethodReturnValueHandlerComposite.java:78)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:135)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1071)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:964)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:670)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:779)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:111)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:337)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:115)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:122)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:126)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:109)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:149)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at com.talentstream.filter.JwtRequestFilter.doFilterInternal(JwtRequestFilter.java:108)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:112)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:82)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:221)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:186)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:177)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:891)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1784)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+11-04-2025_15:36:40.904{UTC}|report-tool|INFO ||c.t.u.ResponseSizeLogger|API [/error] response size: 110 bytes (~0.11 KB)
+11-04-2025_15:36:40.922{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|Authorization Header: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnb2RhcnNoYW5yZWRkeUBnbWFpbC5jb20iLCJleHAiOjE3NDQ0MDE5OTYsImlhdCI6MTc0NDM2NTk5Nn0.mc6Q3G3eCiLnh0rDSi0euGmPbB_t-TPl-ID0fmUCWPM
+11-04-2025_15:36:40.922{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|JWT: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnb2RhcnNoYW5yZWRkeUBnbWFpbC5jb20iLCJleHAiOjE3NDQ0MDE5OTYsImlhdCI6MTc0NDM2NTk5Nn0.mc6Q3G3eCiLnh0rDSi0euGmPbB_t-TPl-ID0fmUCWPM
+11-04-2025_15:36:40.922{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|Username: godarshanreddy@gmail.com
+11-04-2025_15:36:40.922{UTC}|report-tool|INFO ||c.t.c.ApplyJobController|Request received to get unread alert count for applicant 89
+11-04-2025_15:36:40.928{UTC}|report-tool|INFO ||c.t.u.ResponseSizeLogger|API [/applicantprofile/89/profile-view] response size: 1111 bytes (~1.08 KB)
+11-04-2025_15:36:40.950{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|Authorization Header: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnb2RhcnNoYW5yZWRkeUBnbWFpbC5jb20iLCJleHAiOjE3NDQ0MDE5OTYsImlhdCI6MTc0NDM2NTk5Nn0.mc6Q3G3eCiLnh0rDSi0euGmPbB_t-TPl-ID0fmUCWPM
+11-04-2025_15:36:40.950{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|JWT: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnb2RhcnNoYW5yZWRkeUBnbWFpbC5jb20iLCJleHAiOjE3NDQ0MDE5OTYsImlhdCI6MTc0NDM2NTk5Nn0.mc6Q3G3eCiLnh0rDSi0euGmPbB_t-TPl-ID0fmUCWPM
+11-04-2025_15:36:40.952{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|Username: godarshanreddy@gmail.com
+11-04-2025_15:36:40.952{UTC}|report-tool|DEBUG||c.t.c.ApplicantProfileController|Fetching profile ID for applicantId: 89
+11-04-2025_15:36:40.952{UTC}|report-tool|INFO ||c.t.c.ApplyJobController|Retrieved unread alert count successfully for applicant 89: 0
+11-04-2025_15:36:40.958{UTC}|report-tool|INFO ||c.t.u.ResponseSizeLogger|API [/applyjob/applicants/89/unread-alert-count] response size: 1 bytes (~0.00 KB)
+11-04-2025_15:36:40.982{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|Authorization Header: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnb2RhcnNoYW5yZWRkeUBnbWFpbC5jb20iLCJleHAiOjE3NDQ0MDE5OTYsImlhdCI6MTc0NDM2NTk5Nn0.mc6Q3G3eCiLnh0rDSi0euGmPbB_t-TPl-ID0fmUCWPM
+11-04-2025_15:36:40.982{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|JWT: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnb2RhcnNoYW5yZWRkeUBnbWFpbC5jb20iLCJleHAiOjE3NDQ0MDE5OTYsImlhdCI6MTc0NDM2NTk5Nn0.mc6Q3G3eCiLnh0rDSi0euGmPbB_t-TPl-ID0fmUCWPM
+11-04-2025_15:36:40.982{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|Username: godarshanreddy@gmail.com
+11-04-2025_15:36:40.985{UTC}|report-tool|INFO ||c.t.c.ApplyJobController|Request received to count applied jobs for applicantId: 89
+11-04-2025_15:36:41.008{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|Authorization Header: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnb2RhcnNoYW5yZWRkeUBnbWFpbC5jb20iLCJleHAiOjE3NDQ0MDE5OTYsImlhdCI6MTc0NDM2NTk5Nn0.mc6Q3G3eCiLnh0rDSi0euGmPbB_t-TPl-ID0fmUCWPM
+11-04-2025_15:36:41.016{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|JWT: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnb2RhcnNoYW5yZWRkeUBnbWFpbC5jb20iLCJleHAiOjE3NDQ0MDE5OTYsImlhdCI6MTc0NDM2NTk5Nn0.mc6Q3G3eCiLnh0rDSi0euGmPbB_t-TPl-ID0fmUCWPM
+11-04-2025_15:36:41.016{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|Username: godarshanreddy@gmail.com
+11-04-2025_15:36:41.038{UTC}|report-tool|INFO ||c.t.u.ResponseSizeLogger|API [/applicantprofile/89/profileid] response size: 1 bytes (~0.00 KB)
+11-04-2025_15:36:41.059{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|Authorization Header: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnb2RhcnNoYW5yZWRkeUBnbWFpbC5jb20iLCJleHAiOjE3NDQ0MDE5OTYsImlhdCI6MTc0NDM2NTk5Nn0.mc6Q3G3eCiLnh0rDSi0euGmPbB_t-TPl-ID0fmUCWPM
+11-04-2025_15:36:41.059{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|JWT: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnb2RhcnNoYW5yZWRkeUBnbWFpbC5jb20iLCJleHAiOjE3NDQ0MDE5OTYsImlhdCI6MTc0NDM2NTk5Nn0.mc6Q3G3eCiLnh0rDSi0euGmPbB_t-TPl-ID0fmUCWPM
+11-04-2025_15:36:41.059{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|Username: godarshanreddy@gmail.com
+11-04-2025_15:36:41.059{UTC}|report-tool|DEBUG||c.t.c.ApplicantProfileController|Fetching profile view for applicantId: 89
+11-04-2025_15:36:41.071{UTC}|report-tool|INFO ||c.t.c.ApplyJobController|Counted applied jobs successfully for applicantId: 89
+11-04-2025_15:36:41.071{UTC}|report-tool|INFO ||c.t.u.ResponseSizeLogger|API [/applyjob/countAppliedJobs/89] response size: 1 bytes (~0.00 KB)
+11-04-2025_15:36:41.078{UTC}|report-tool|INFO ||c.t.u.ResponseSizeLogger|API [/recommendedjob/countRecommendedJobsForApplicant/89] response size: 3 bytes (~0.00 KB)
+11-04-2025_15:36:41.154{UTC}|report-tool|INFO ||c.t.u.ResponseSizeLogger|API [/savedjob/countSavedJobs/89] response size: 1 bytes (~0.00 KB)
+11-04-2025_15:36:41.157{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|Authorization Header: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnb2RhcnNoYW5yZWRkeUBnbWFpbC5jb20iLCJleHAiOjE3NDQ0MDE5OTYsImlhdCI6MTc0NDM2NTk5Nn0.mc6Q3G3eCiLnh0rDSi0euGmPbB_t-TPl-ID0fmUCWPM
+11-04-2025_15:36:41.157{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|JWT: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnb2RhcnNoYW5yZWRkeUBnbWFpbC5jb20iLCJleHAiOjE3NDQ0MDE5OTYsImlhdCI6MTc0NDM2NTk5Nn0.mc6Q3G3eCiLnh0rDSi0euGmPbB_t-TPl-ID0fmUCWPM
+11-04-2025_15:36:41.157{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|Username: godarshanreddy@gmail.com
+11-04-2025_15:36:41.159{UTC}|report-tool|INFO ||c.t.c.FindRecommendedJobController|Count of recommended jobs for applicant {} retrieved successfully: {}
+11-04-2025_15:36:41.225{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|Authorization Header: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnb2RhcnNoYW5yZWRkeUBnbWFpbC5jb20iLCJleHAiOjE3NDQ0MDE5OTYsImlhdCI6MTc0NDM2NTk5Nn0.mc6Q3G3eCiLnh0rDSi0euGmPbB_t-TPl-ID0fmUCWPM
+11-04-2025_15:36:41.225{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|JWT: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnb2RhcnNoYW5yZWRkeUBnbWFpbC5jb20iLCJleHAiOjE3NDQ0MDE5OTYsImlhdCI6MTc0NDM2NTk5Nn0.mc6Q3G3eCiLnh0rDSi0euGmPbB_t-TPl-ID0fmUCWPM
+11-04-2025_15:36:41.225{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|Username: godarshanreddy@gmail.com
+11-04-2025_15:36:41.295{UTC}|report-tool|INFO ||c.t.u.ResponseSizeLogger|API [/savedjob/countSavedJobs/89] response size: 1 bytes (~0.00 KB)
+11-04-2025_15:36:41.372{UTC}|report-tool|INFO ||c.t.u.ResponseSizeLogger|API [/recommendedjob/countRecommendedJobsForApplicant/89] response size: 3 bytes (~0.00 KB)
+11-04-2025_15:36:41.457{UTC}|report-tool|INFO ||c.t.c.ApplicantProfileController|Profile view fetched successfully for applicantId: 89
+11-04-2025_15:36:41.539{UTC}|report-tool|INFO ||c.t.u.ResponseSizeLogger|API [/applicantprofile/89/profile-view] response size: 1111 bytes (~1.08 KB)
+11-04-2025_15:36:41.897{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|Authorization Header: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnb2RhcnNoYW5yZWRkeUBnbWFpbC5jb20iLCJleHAiOjE3NDQ0MDE5OTYsImlhdCI6MTc0NDM2NTk5Nn0.mc6Q3G3eCiLnh0rDSi0euGmPbB_t-TPl-ID0fmUCWPM
+11-04-2025_15:36:41.897{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|JWT: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnb2RhcnNoYW5yZWRkeUBnbWFpbC5jb20iLCJleHAiOjE3NDQ0MDE5OTYsImlhdCI6MTc0NDM2NTk5Nn0.mc6Q3G3eCiLnh0rDSi0euGmPbB_t-TPl-ID0fmUCWPM
+11-04-2025_15:36:41.897{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|Username: godarshanreddy@gmail.com
+11-04-2025_15:36:41.902{UTC}|report-tool|DEBUG||c.t.c.ApplicantProfileController|Fetching profile view for applicantId: 89
+11-04-2025_15:36:42.055{UTC}|report-tool|INFO ||c.t.c.ApplicantProfileController|Profile view fetched successfully for applicantId: 89
+11-04-2025_15:36:42.119{UTC}|report-tool|INFO ||c.t.u.ResponseSizeLogger|API [/applicantprofile/89/profile-view] response size: 1111 bytes (~1.08 KB)
+11-04-2025_15:36:42.219{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|Authorization Header: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnb2RhcnNoYW5yZWRkeUBnbWFpbC5jb20iLCJleHAiOjE3NDQ0MDE5OTYsImlhdCI6MTc0NDM2NTk5Nn0.mc6Q3G3eCiLnh0rDSi0euGmPbB_t-TPl-ID0fmUCWPM
+11-04-2025_15:36:42.219{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|JWT: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnb2RhcnNoYW5yZWRkeUBnbWFpbC5jb20iLCJleHAiOjE3NDQ0MDE5OTYsImlhdCI6MTc0NDM2NTk5Nn0.mc6Q3G3eCiLnh0rDSi0euGmPbB_t-TPl-ID0fmUCWPM
+11-04-2025_15:36:42.219{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|Username: godarshanreddy@gmail.com
+11-04-2025_15:36:42.231{UTC}|report-tool|DEBUG||c.t.c.ApplicantProfileController|Fetching profile view for applicantId: 89
+11-04-2025_15:36:42.360{UTC}|report-tool|INFO ||c.t.c.ApplicantProfileController|Profile view fetched successfully for applicantId: 89
+11-04-2025_15:36:42.427{UTC}|report-tool|INFO ||c.t.u.ResponseSizeLogger|API [/applicantprofile/89/profile-view] response size: 1111 bytes (~1.08 KB)
+11-04-2025_15:36:51.168{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|Authorization Header: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnb2RhcnNoYW5yZWRkeUBnbWFpbC5jb20iLCJleHAiOjE3NDQ0MDE5OTYsImlhdCI6MTc0NDM2NTk5Nn0.mc6Q3G3eCiLnh0rDSi0euGmPbB_t-TPl-ID0fmUCWPM
+11-04-2025_15:36:51.168{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|JWT: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnb2RhcnNoYW5yZWRkeUBnbWFpbC5jb20iLCJleHAiOjE3NDQ0MDE5OTYsImlhdCI6MTc0NDM2NTk5Nn0.mc6Q3G3eCiLnh0rDSi0euGmPbB_t-TPl-ID0fmUCWPM
+11-04-2025_15:36:51.168{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|Username: godarshanreddy@gmail.com
+11-04-2025_15:36:51.170{UTC}|report-tool|DEBUG||c.t.c.ApplicantProfileController|Fetching profile ID for applicantId: 89
+11-04-2025_15:36:51.234{UTC}|report-tool|INFO ||c.t.u.ResponseSizeLogger|API [/applicantprofile/89/profileid] response size: 1 bytes (~0.00 KB)
+11-04-2025_15:36:51.350{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|Authorization Header: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnb2RhcnNoYW5yZWRkeUBnbWFpbC5jb20iLCJleHAiOjE3NDQ0MDE5OTYsImlhdCI6MTc0NDM2NTk5Nn0.mc6Q3G3eCiLnh0rDSi0euGmPbB_t-TPl-ID0fmUCWPM
+11-04-2025_15:36:51.350{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|JWT: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnb2RhcnNoYW5yZWRkeUBnbWFpbC5jb20iLCJleHAiOjE3NDQ0MDE5OTYsImlhdCI6MTc0NDM2NTk5Nn0.mc6Q3G3eCiLnh0rDSi0euGmPbB_t-TPl-ID0fmUCWPM
+11-04-2025_15:36:51.350{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|Username: godarshanreddy@gmail.com
+11-04-2025_15:36:51.350{UTC}|report-tool|DEBUG||c.t.c.ApplicantProfileController|Fetching profile ID for applicantId: 89
+11-04-2025_15:36:51.424{UTC}|report-tool|INFO ||c.t.u.ResponseSizeLogger|API [/applicantprofile/89/profileid] response size: 1 bytes (~0.00 KB)
+11-04-2025_15:36:51.537{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|Authorization Header: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnb2RhcnNoYW5yZWRkeUBnbWFpbC5jb20iLCJleHAiOjE3NDQ0MDE5OTYsImlhdCI6MTc0NDM2NTk5Nn0.mc6Q3G3eCiLnh0rDSi0euGmPbB_t-TPl-ID0fmUCWPM
+11-04-2025_15:36:51.537{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|JWT: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnb2RhcnNoYW5yZWRkeUBnbWFpbC5jb20iLCJleHAiOjE3NDQ0MDE5OTYsImlhdCI6MTc0NDM2NTk5Nn0.mc6Q3G3eCiLnh0rDSi0euGmPbB_t-TPl-ID0fmUCWPM
+11-04-2025_15:36:51.537{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|Username: godarshanreddy@gmail.com
+11-04-2025_15:36:51.546{UTC}|report-tool|DEBUG||c.t.c.ApplicantProfileController|Fetching profile ID for applicantId: 89
+11-04-2025_15:36:51.546{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|Authorization Header: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnb2RhcnNoYW5yZWRkeUBnbWFpbC5jb20iLCJleHAiOjE3NDQ0MDE5OTYsImlhdCI6MTc0NDM2NTk5Nn0.mc6Q3G3eCiLnh0rDSi0euGmPbB_t-TPl-ID0fmUCWPM
+11-04-2025_15:36:51.546{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|JWT: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnb2RhcnNoYW5yZWRkeUBnbWFpbC5jb20iLCJleHAiOjE3NDQ0MDE5OTYsImlhdCI6MTc0NDM2NTk5Nn0.mc6Q3G3eCiLnh0rDSi0euGmPbB_t-TPl-ID0fmUCWPM
+11-04-2025_15:36:51.546{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|Username: godarshanreddy@gmail.com
+11-04-2025_15:36:51.546{UTC}|report-tool|INFO ||c.t.c.FindRecommendedJobController|Count of recommended jobs for applicant {} retrieved successfully: {}
+11-04-2025_15:36:51.553{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|Authorization Header: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnb2RhcnNoYW5yZWRkeUBnbWFpbC5jb20iLCJleHAiOjE3NDQ0MDE5OTYsImlhdCI6MTc0NDM2NTk5Nn0.mc6Q3G3eCiLnh0rDSi0euGmPbB_t-TPl-ID0fmUCWPM
+11-04-2025_15:36:51.553{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|JWT: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnb2RhcnNoYW5yZWRkeUBnbWFpbC5jb20iLCJleHAiOjE3NDQ0MDE5OTYsImlhdCI6MTc0NDM2NTk5Nn0.mc6Q3G3eCiLnh0rDSi0euGmPbB_t-TPl-ID0fmUCWPM
+11-04-2025_15:36:51.553{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|Username: godarshanreddy@gmail.com
+11-04-2025_15:36:51.623{UTC}|report-tool|INFO ||c.t.u.ResponseSizeLogger|API [/applicantprofile/89/profileid] response size: 1 bytes (~0.00 KB)
+11-04-2025_15:36:51.692{UTC}|report-tool|WARN ||c.t.s.FinRecommendedJobService|Warning: Unable to parse experience as Integer
+11-04-2025_15:36:51.760{UTC}|report-tool|INFO ||c.t.u.ResponseSizeLogger|API [/recommendedjob/countRecommendedJobsForApplicant/89] response size: 3 bytes (~0.00 KB)
+11-04-2025_15:36:51.869{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|Authorization Header: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnb2RhcnNoYW5yZWRkeUBnbWFpbC5jb20iLCJleHAiOjE3NDQ0MDE5OTYsImlhdCI6MTc0NDM2NTk5Nn0.mc6Q3G3eCiLnh0rDSi0euGmPbB_t-TPl-ID0fmUCWPM
+11-04-2025_15:36:51.869{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|JWT: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnb2RhcnNoYW5yZWRkeUBnbWFpbC5jb20iLCJleHAiOjE3NDQ0MDE5OTYsImlhdCI6MTc0NDM2NTk5Nn0.mc6Q3G3eCiLnh0rDSi0euGmPbB_t-TPl-ID0fmUCWPM
+11-04-2025_15:36:51.869{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|Username: godarshanreddy@gmail.com
+11-04-2025_15:36:51.870{UTC}|report-tool|INFO ||c.t.c.FindRecommendedJobController|Count of recommended jobs for applicant {} retrieved successfully: {}
+11-04-2025_15:36:51.918{UTC}|report-tool|INFO ||c.t.u.ResponseSizeLogger|API [/recommendedjob/findrecommendedjob/89] response size: 3955 bytes (~3.86 KB)
+11-04-2025_15:36:52.018{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|Authorization Header: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnb2RhcnNoYW5yZWRkeUBnbWFpbC5jb20iLCJleHAiOjE3NDQ0MDE5OTYsImlhdCI6MTc0NDM2NTk5Nn0.mc6Q3G3eCiLnh0rDSi0euGmPbB_t-TPl-ID0fmUCWPM
+11-04-2025_15:36:52.018{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|JWT: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnb2RhcnNoYW5yZWRkeUBnbWFpbC5jb20iLCJleHAiOjE3NDQ0MDE5OTYsImlhdCI6MTc0NDM2NTk5Nn0.mc6Q3G3eCiLnh0rDSi0euGmPbB_t-TPl-ID0fmUCWPM
+11-04-2025_15:36:52.018{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|Username: godarshanreddy@gmail.com
+11-04-2025_15:36:52.089{UTC}|report-tool|INFO ||c.t.u.ResponseSizeLogger|API [/recommendedjob/countRecommendedJobsForApplicant/89] response size: 3 bytes (~0.00 KB)
+11-04-2025_15:36:52.131{UTC}|report-tool|WARN ||c.t.s.FinRecommendedJobService|Warning: Unable to parse experience as Integer
+11-04-2025_15:36:52.327{UTC}|report-tool|INFO ||c.t.u.ResponseSizeLogger|API [/recommendedjob/findrecommendedjob/89] response size: 3955 bytes (~3.86 KB)
+11-04-2025_15:37:55.908{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|Authorization Header: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnb2RhcnNoYW5yZWRkeUBnbWFpbC5jb20iLCJleHAiOjE3NDQ0MDE5OTYsImlhdCI6MTc0NDM2NTk5Nn0.mc6Q3G3eCiLnh0rDSi0euGmPbB_t-TPl-ID0fmUCWPM
+11-04-2025_15:37:55.908{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|JWT: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnb2RhcnNoYW5yZWRkeUBnbWFpbC5jb20iLCJleHAiOjE3NDQ0MDE5OTYsImlhdCI6MTc0NDM2NTk5Nn0.mc6Q3G3eCiLnh0rDSi0euGmPbB_t-TPl-ID0fmUCWPM
+11-04-2025_15:37:55.908{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|Username: godarshanreddy@gmail.com
+11-04-2025_15:37:55.911{UTC}|report-tool|DEBUG||c.t.c.ApplicantProfileController|Fetching profile ID for applicantId: 89
+11-04-2025_15:37:56.029{UTC}|report-tool|INFO ||c.t.u.ResponseSizeLogger|API [/applicantprofile/89/profileid] response size: 1 bytes (~0.00 KB)
+11-04-2025_15:37:56.029{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|Authorization Header: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnb2RhcnNoYW5yZWRkeUBnbWFpbC5jb20iLCJleHAiOjE3NDQ0MDE5OTYsImlhdCI6MTc0NDM2NTk5Nn0.mc6Q3G3eCiLnh0rDSi0euGmPbB_t-TPl-ID0fmUCWPM
+11-04-2025_15:37:56.029{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|JWT: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnb2RhcnNoYW5yZWRkeUBnbWFpbC5jb20iLCJleHAiOjE3NDQ0MDE5OTYsImlhdCI6MTc0NDM2NTk5Nn0.mc6Q3G3eCiLnh0rDSi0euGmPbB_t-TPl-ID0fmUCWPM
+11-04-2025_15:37:56.029{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|Username: godarshanreddy@gmail.com
+11-04-2025_15:37:56.062{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|Authorization Header: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnb2RhcnNoYW5yZWRkeUBnbWFpbC5jb20iLCJleHAiOjE3NDQ0MDE5OTYsImlhdCI6MTc0NDM2NTk5Nn0.mc6Q3G3eCiLnh0rDSi0euGmPbB_t-TPl-ID0fmUCWPM
+11-04-2025_15:37:56.062{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|JWT: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnb2RhcnNoYW5yZWRkeUBnbWFpbC5jb20iLCJleHAiOjE3NDQ0MDE5OTYsImlhdCI6MTc0NDM2NTk5Nn0.mc6Q3G3eCiLnh0rDSi0euGmPbB_t-TPl-ID0fmUCWPM
+11-04-2025_15:37:56.062{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|Username: godarshanreddy@gmail.com
+11-04-2025_15:37:56.097{UTC}|report-tool|INFO ||c.t.u.ResponseSizeLogger|API [/savedjob/countSavedJobs/89] response size: 1 bytes (~0.00 KB)
+11-04-2025_15:37:56.138{UTC}|report-tool|INFO ||c.t.u.ResponseSizeLogger|API [/savedjob/getSavedJobs/89] response size: 1425 bytes (~1.39 KB)
+11-04-2025_15:37:56.181{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|Authorization Header: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnb2RhcnNoYW5yZWRkeUBnbWFpbC5jb20iLCJleHAiOjE3NDQ0MDE5OTYsImlhdCI6MTc0NDM2NTk5Nn0.mc6Q3G3eCiLnh0rDSi0euGmPbB_t-TPl-ID0fmUCWPM
+11-04-2025_15:37:56.181{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|JWT: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnb2RhcnNoYW5yZWRkeUBnbWFpbC5jb20iLCJleHAiOjE3NDQ0MDE5OTYsImlhdCI6MTc0NDM2NTk5Nn0.mc6Q3G3eCiLnh0rDSi0euGmPbB_t-TPl-ID0fmUCWPM
+11-04-2025_15:37:56.181{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|Username: godarshanreddy@gmail.com
+11-04-2025_15:37:56.255{UTC}|report-tool|INFO ||c.t.u.ResponseSizeLogger|API [/savedjob/countSavedJobs/89] response size: 1 bytes (~0.00 KB)
+11-04-2025_15:37:56.255{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|Authorization Header: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnb2RhcnNoYW5yZWRkeUBnbWFpbC5jb20iLCJleHAiOjE3NDQ0MDE5OTYsImlhdCI6MTc0NDM2NTk5Nn0.mc6Q3G3eCiLnh0rDSi0euGmPbB_t-TPl-ID0fmUCWPM
+11-04-2025_15:37:56.255{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|JWT: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnb2RhcnNoYW5yZWRkeUBnbWFpbC5jb20iLCJleHAiOjE3NDQ0MDE5OTYsImlhdCI6MTc0NDM2NTk5Nn0.mc6Q3G3eCiLnh0rDSi0euGmPbB_t-TPl-ID0fmUCWPM
+11-04-2025_15:37:56.255{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|Username: godarshanreddy@gmail.com
+11-04-2025_15:37:56.321{UTC}|report-tool|INFO ||c.t.u.ResponseSizeLogger|API [/savedjob/getSavedJobs/89] response size: 1425 bytes (~1.39 KB)
+11-04-2025_15:39:28.960{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|Authorization Header: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnb2RhcnNoYW5yZWRkeUBnbWFpbC5jb20iLCJleHAiOjE3NDQ0MDE5OTYsImlhdCI6MTc0NDM2NTk5Nn0.mc6Q3G3eCiLnh0rDSi0euGmPbB_t-TPl-ID0fmUCWPM
+11-04-2025_15:39:28.960{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|JWT: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnb2RhcnNoYW5yZWRkeUBnbWFpbC5jb20iLCJleHAiOjE3NDQ0MDE5OTYsImlhdCI6MTc0NDM2NTk5Nn0.mc6Q3G3eCiLnh0rDSi0euGmPbB_t-TPl-ID0fmUCWPM
+11-04-2025_15:39:28.960{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|Username: godarshanreddy@gmail.com
+11-04-2025_15:39:28.964{UTC}|report-tool|DEBUG||c.t.c.ApplicantProfileController|Fetching profile ID for applicantId: 89
+11-04-2025_15:39:29.152{UTC}|report-tool|INFO ||c.t.u.ResponseSizeLogger|API [/applicantprofile/89/profileid] response size: 1 bytes (~0.00 KB)
+11-04-2025_15:39:29.354{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|Authorization Header: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnb2RhcnNoYW5yZWRkeUBnbWFpbC5jb20iLCJleHAiOjE3NDQ0MDE5OTYsImlhdCI6MTc0NDM2NTk5Nn0.mc6Q3G3eCiLnh0rDSi0euGmPbB_t-TPl-ID0fmUCWPM
+11-04-2025_15:39:29.354{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|JWT: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnb2RhcnNoYW5yZWRkeUBnbWFpbC5jb20iLCJleHAiOjE3NDQ0MDE5OTYsImlhdCI6MTc0NDM2NTk5Nn0.mc6Q3G3eCiLnh0rDSi0euGmPbB_t-TPl-ID0fmUCWPM
+11-04-2025_15:39:29.354{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|Username: godarshanreddy@gmail.com
+11-04-2025_15:39:29.356{UTC}|report-tool|DEBUG||c.t.c.ApplicantProfileController|Fetching profile ID for applicantId: 89
+11-04-2025_15:39:29.392{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|Authorization Header: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnb2RhcnNoYW5yZWRkeUBnbWFpbC5jb20iLCJleHAiOjE3NDQ0MDE5OTYsImlhdCI6MTc0NDM2NTk5Nn0.mc6Q3G3eCiLnh0rDSi0euGmPbB_t-TPl-ID0fmUCWPM
+11-04-2025_15:39:29.392{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|JWT: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnb2RhcnNoYW5yZWRkeUBnbWFpbC5jb20iLCJleHAiOjE3NDQ0MDE5OTYsImlhdCI6MTc0NDM2NTk5Nn0.mc6Q3G3eCiLnh0rDSi0euGmPbB_t-TPl-ID0fmUCWPM
+11-04-2025_15:39:29.392{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|Username: godarshanreddy@gmail.com
+11-04-2025_15:39:29.397{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|Authorization Header: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnb2RhcnNoYW5yZWRkeUBnbWFpbC5jb20iLCJleHAiOjE3NDQ0MDE5OTYsImlhdCI6MTc0NDM2NTk5Nn0.mc6Q3G3eCiLnh0rDSi0euGmPbB_t-TPl-ID0fmUCWPM
+11-04-2025_15:39:29.397{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|JWT: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnb2RhcnNoYW5yZWRkeUBnbWFpbC5jb20iLCJleHAiOjE3NDQ0MDE5OTYsImlhdCI6MTc0NDM2NTk5Nn0.mc6Q3G3eCiLnh0rDSi0euGmPbB_t-TPl-ID0fmUCWPM
+11-04-2025_15:39:29.397{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|Username: godarshanreddy@gmail.com
+11-04-2025_15:39:29.400{UTC}|report-tool|INFO ||c.t.c.FindRecommendedJobController|Count of recommended jobs for applicant {} retrieved successfully: {}
+11-04-2025_15:39:29.537{UTC}|report-tool|INFO ||c.t.u.ResponseSizeLogger|API [/applicantprofile/89/profileid] response size: 1 bytes (~0.00 KB)
+11-04-2025_15:39:29.636{UTC}|report-tool|WARN ||c.t.s.FinRecommendedJobService|Warning: Unable to parse experience as Integer
+11-04-2025_15:39:29.841{UTC}|report-tool|INFO ||c.t.u.ResponseSizeLogger|API [/recommendedjob/countRecommendedJobsForApplicant/89] response size: 3 bytes (~0.00 KB)
+11-04-2025_15:39:30.033{UTC}|report-tool|INFO ||c.t.u.ResponseSizeLogger|API [/recommendedjob/findrecommendedjob/89] response size: 3955 bytes (~3.86 KB)
+11-04-2025_15:39:30.458{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|Authorization Header: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnb2RhcnNoYW5yZWRkeUBnbWFpbC5jb20iLCJleHAiOjE3NDQ0MDE5OTYsImlhdCI6MTc0NDM2NTk5Nn0.mc6Q3G3eCiLnh0rDSi0euGmPbB_t-TPl-ID0fmUCWPM
+11-04-2025_15:39:30.459{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|JWT: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnb2RhcnNoYW5yZWRkeUBnbWFpbC5jb20iLCJleHAiOjE3NDQ0MDE5OTYsImlhdCI6MTc0NDM2NTk5Nn0.mc6Q3G3eCiLnh0rDSi0euGmPbB_t-TPl-ID0fmUCWPM
+11-04-2025_15:39:30.459{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|Username: godarshanreddy@gmail.com
+11-04-2025_15:39:30.489{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|Authorization Header: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnb2RhcnNoYW5yZWRkeUBnbWFpbC5jb20iLCJleHAiOjE3NDQ0MDE5OTYsImlhdCI6MTc0NDM2NTk5Nn0.mc6Q3G3eCiLnh0rDSi0euGmPbB_t-TPl-ID0fmUCWPM
+11-04-2025_15:39:30.489{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|JWT: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnb2RhcnNoYW5yZWRkeUBnbWFpbC5jb20iLCJleHAiOjE3NDQ0MDE5OTYsImlhdCI6MTc0NDM2NTk5Nn0.mc6Q3G3eCiLnh0rDSi0euGmPbB_t-TPl-ID0fmUCWPM
+11-04-2025_15:39:30.489{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|Username: godarshanreddy@gmail.com
+11-04-2025_15:39:30.492{UTC}|report-tool|INFO ||c.t.c.FindRecommendedJobController|Count of recommended jobs for applicant {} retrieved successfully: {}
+11-04-2025_15:39:30.666{UTC}|report-tool|WARN ||c.t.s.FinRecommendedJobService|Warning: Unable to parse experience as Integer
+11-04-2025_15:39:31.233{UTC}|report-tool|INFO ||c.t.u.ResponseSizeLogger|API [/recommendedjob/findrecommendedjob/89] response size: 3955 bytes (~3.86 KB)
+11-04-2025_15:39:31.277{UTC}|report-tool|INFO ||c.t.u.ResponseSizeLogger|API [/recommendedjob/countRecommendedJobsForApplicant/89] response size: 3 bytes (~0.00 KB)
+11-04-2025_15:43:45.587{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|Authorization Header: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnb2RhcnNoYW5yZWRkeUBnbWFpbC5jb20iLCJleHAiOjE3NDQ0MDE5OTYsImlhdCI6MTc0NDM2NTk5Nn0.mc6Q3G3eCiLnh0rDSi0euGmPbB_t-TPl-ID0fmUCWPM
+11-04-2025_15:43:45.587{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|JWT: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnb2RhcnNoYW5yZWRkeUBnbWFpbC5jb20iLCJleHAiOjE3NDQ0MDE5OTYsImlhdCI6MTc0NDM2NTk5Nn0.mc6Q3G3eCiLnh0rDSi0euGmPbB_t-TPl-ID0fmUCWPM
+11-04-2025_15:43:45.587{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|Username: godarshanreddy@gmail.com
+11-04-2025_15:43:45.587{UTC}|report-tool|DEBUG||c.t.c.ApplicantProfileController|Fetching profile ID for applicantId: 89
+11-04-2025_15:43:45.639{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|Authorization Header: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnb2RhcnNoYW5yZWRkeUBnbWFpbC5jb20iLCJleHAiOjE3NDQ0MDE5OTYsImlhdCI6MTc0NDM2NTk5Nn0.mc6Q3G3eCiLnh0rDSi0euGmPbB_t-TPl-ID0fmUCWPM
+11-04-2025_15:43:45.639{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|JWT: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnb2RhcnNoYW5yZWRkeUBnbWFpbC5jb20iLCJleHAiOjE3NDQ0MDE5OTYsImlhdCI6MTc0NDM2NTk5Nn0.mc6Q3G3eCiLnh0rDSi0euGmPbB_t-TPl-ID0fmUCWPM
+11-04-2025_15:43:45.639{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|Username: godarshanreddy@gmail.com
+11-04-2025_15:43:45.641{UTC}|report-tool|INFO ||c.t.c.ApplyJobController|Request received to count applied jobs for applicantId: 89
+11-04-2025_15:43:45.641{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|Authorization Header: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnb2RhcnNoYW5yZWRkeUBnbWFpbC5jb20iLCJleHAiOjE3NDQ0MDE5OTYsImlhdCI6MTc0NDM2NTk5Nn0.mc6Q3G3eCiLnh0rDSi0euGmPbB_t-TPl-ID0fmUCWPM
+11-04-2025_15:43:45.641{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|JWT: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnb2RhcnNoYW5yZWRkeUBnbWFpbC5jb20iLCJleHAiOjE3NDQ0MDE5OTYsImlhdCI6MTc0NDM2NTk5Nn0.mc6Q3G3eCiLnh0rDSi0euGmPbB_t-TPl-ID0fmUCWPM
+11-04-2025_15:43:45.641{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|Username: godarshanreddy@gmail.com
+11-04-2025_15:43:45.646{UTC}|report-tool|INFO ||c.t.c.ApplyJobController|Request received to get applied jobs for applicantId: 89
+11-04-2025_15:43:45.651{UTC}|report-tool|INFO ||c.t.u.ResponseSizeLogger|API [/applicantprofile/89/profileid] response size: 1 bytes (~0.00 KB)
+11-04-2025_15:43:45.679{UTC}|report-tool|INFO ||c.t.c.ApplyJobController|Retrieved applied jobs successfully for applicantId: 89
+11-04-2025_15:43:45.681{UTC}|report-tool|INFO ||c.t.u.ResponseSizeLogger|API [/applyjob/getAppliedJobs/89] response size: 233 bytes (~0.23 KB)
+11-04-2025_15:43:45.709{UTC}|report-tool|INFO ||c.t.c.ApplyJobController|Counted applied jobs successfully for applicantId: 89
+11-04-2025_15:43:45.709{UTC}|report-tool|INFO ||c.t.u.ResponseSizeLogger|API [/applyjob/countAppliedJobs/89] response size: 1 bytes (~0.00 KB)
+11-04-2025_15:43:45.745{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|Authorization Header: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnb2RhcnNoYW5yZWRkeUBnbWFpbC5jb20iLCJleHAiOjE3NDQ0MDE5OTYsImlhdCI6MTc0NDM2NTk5Nn0.mc6Q3G3eCiLnh0rDSi0euGmPbB_t-TPl-ID0fmUCWPM
+11-04-2025_15:43:45.745{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|JWT: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnb2RhcnNoYW5yZWRkeUBnbWFpbC5jb20iLCJleHAiOjE3NDQ0MDE5OTYsImlhdCI6MTc0NDM2NTk5Nn0.mc6Q3G3eCiLnh0rDSi0euGmPbB_t-TPl-ID0fmUCWPM
+11-04-2025_15:43:45.745{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|Username: godarshanreddy@gmail.com
+11-04-2025_15:43:45.745{UTC}|report-tool|INFO ||c.t.c.ApplyJobController|Request received to get applied jobs for applicantId: 89
+11-04-2025_15:43:45.780{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|Authorization Header: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnb2RhcnNoYW5yZWRkeUBnbWFpbC5jb20iLCJleHAiOjE3NDQ0MDE5OTYsImlhdCI6MTc0NDM2NTk5Nn0.mc6Q3G3eCiLnh0rDSi0euGmPbB_t-TPl-ID0fmUCWPM
+11-04-2025_15:43:45.780{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|JWT: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnb2RhcnNoYW5yZWRkeUBnbWFpbC5jb20iLCJleHAiOjE3NDQ0MDE5OTYsImlhdCI6MTc0NDM2NTk5Nn0.mc6Q3G3eCiLnh0rDSi0euGmPbB_t-TPl-ID0fmUCWPM
+11-04-2025_15:43:45.780{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|Username: godarshanreddy@gmail.com
+11-04-2025_15:43:45.780{UTC}|report-tool|INFO ||c.t.c.ApplyJobController|Request received to count applied jobs for applicantId: 89
+11-04-2025_15:43:45.780{UTC}|report-tool|INFO ||c.t.c.ApplyJobController|Retrieved applied jobs successfully for applicantId: 89
+11-04-2025_15:43:45.784{UTC}|report-tool|INFO ||c.t.u.ResponseSizeLogger|API [/applyjob/getAppliedJobs/89] response size: 233 bytes (~0.23 KB)
+11-04-2025_15:43:45.846{UTC}|report-tool|INFO ||c.t.c.ApplyJobController|Counted applied jobs successfully for applicantId: 89
+11-04-2025_15:43:45.846{UTC}|report-tool|INFO ||c.t.u.ResponseSizeLogger|API [/applyjob/countAppliedJobs/89] response size: 1 bytes (~0.00 KB)
+11-04-2025_15:43:45.892{UTC}|report-tool|WARN ||c.z.h.p.PoolBase|HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@1feb586d (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+11-04-2025_15:43:45.917{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|Authorization Header: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnb2RhcnNoYW5yZWRkeUBnbWFpbC5jb20iLCJleHAiOjE3NDQ0MDE5OTYsImlhdCI6MTc0NDM2NTk5Nn0.mc6Q3G3eCiLnh0rDSi0euGmPbB_t-TPl-ID0fmUCWPM
+11-04-2025_15:43:45.917{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|JWT: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnb2RhcnNoYW5yZWRkeUBnbWFpbC5jb20iLCJleHAiOjE3NDQ0MDE5OTYsImlhdCI6MTc0NDM2NTk5Nn0.mc6Q3G3eCiLnh0rDSi0euGmPbB_t-TPl-ID0fmUCWPM
+11-04-2025_15:43:45.917{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|Username: godarshanreddy@gmail.com
+11-04-2025_15:43:45.925{UTC}|report-tool|INFO ||c.t.c.ApplyJobController|Request received to count applied jobs for applicantId: 89
+11-04-2025_15:43:45.993{UTC}|report-tool|INFO ||c.t.c.ApplyJobController|Counted applied jobs successfully for applicantId: 89
+11-04-2025_15:43:45.994{UTC}|report-tool|INFO ||c.t.u.ResponseSizeLogger|API [/applyjob/countAppliedJobs/89] response size: 1 bytes (~0.00 KB)
+11-04-2025_15:43:45.998{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|Authorization Header: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnb2RhcnNoYW5yZWRkeUBnbWFpbC5jb20iLCJleHAiOjE3NDQ0MDE5OTYsImlhdCI6MTc0NDM2NTk5Nn0.mc6Q3G3eCiLnh0rDSi0euGmPbB_t-TPl-ID0fmUCWPM
+11-04-2025_15:43:45.998{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|JWT: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnb2RhcnNoYW5yZWRkeUBnbWFpbC5jb20iLCJleHAiOjE3NDQ0MDE5OTYsImlhdCI6MTc0NDM2NTk5Nn0.mc6Q3G3eCiLnh0rDSi0euGmPbB_t-TPl-ID0fmUCWPM
+11-04-2025_15:43:45.998{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|Username: godarshanreddy@gmail.com
+11-04-2025_15:43:45.999{UTC}|report-tool|INFO ||c.t.c.ApplyJobController|Request received to get applied jobs for applicantId: 89
+11-04-2025_15:43:46.033{UTC}|report-tool|WARN ||c.z.h.p.PoolBase|HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@7c5cc055 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+11-04-2025_15:43:46.059{UTC}|report-tool|INFO ||c.t.c.ApplyJobController|Retrieved applied jobs successfully for applicantId: 89
+11-04-2025_15:43:46.060{UTC}|report-tool|INFO ||c.t.u.ResponseSizeLogger|API [/applyjob/getAppliedJobs/89] response size: 233 bytes (~0.23 KB)
+11-04-2025_15:43:46.097{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|Authorization Header: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnb2RhcnNoYW5yZWRkeUBnbWFpbC5jb20iLCJleHAiOjE3NDQ0MDE5OTYsImlhdCI6MTc0NDM2NTk5Nn0.mc6Q3G3eCiLnh0rDSi0euGmPbB_t-TPl-ID0fmUCWPM
+11-04-2025_15:43:46.097{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|JWT: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnb2RhcnNoYW5yZWRkeUBnbWFpbC5jb20iLCJleHAiOjE3NDQ0MDE5OTYsImlhdCI6MTc0NDM2NTk5Nn0.mc6Q3G3eCiLnh0rDSi0euGmPbB_t-TPl-ID0fmUCWPM
+11-04-2025_15:43:46.097{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|Username: godarshanreddy@gmail.com
+11-04-2025_15:43:46.097{UTC}|report-tool|INFO ||c.t.c.ApplyJobController|Request received to count applied jobs for applicantId: 89
+11-04-2025_15:43:46.170{UTC}|report-tool|INFO ||c.t.c.ApplyJobController|Counted applied jobs successfully for applicantId: 89
+11-04-2025_15:43:46.176{UTC}|report-tool|INFO ||c.t.u.ResponseSizeLogger|API [/applyjob/countAppliedJobs/89] response size: 1 bytes (~0.00 KB)
+11-04-2025_15:43:46.250{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|Authorization Header: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnb2RhcnNoYW5yZWRkeUBnbWFpbC5jb20iLCJleHAiOjE3NDQ0MDE5OTYsImlhdCI6MTc0NDM2NTk5Nn0.mc6Q3G3eCiLnh0rDSi0euGmPbB_t-TPl-ID0fmUCWPM
+11-04-2025_15:43:46.250{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|JWT: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnb2RhcnNoYW5yZWRkeUBnbWFpbC5jb20iLCJleHAiOjE3NDQ0MDE5OTYsImlhdCI6MTc0NDM2NTk5Nn0.mc6Q3G3eCiLnh0rDSi0euGmPbB_t-TPl-ID0fmUCWPM
+11-04-2025_15:43:46.250{UTC}|report-tool|DEBUG||c.t.f.JwtRequestFilter|Username: godarshanreddy@gmail.com
+11-04-2025_15:43:46.250{UTC}|report-tool|INFO ||c.t.c.ApplyJobController|Request received to get applied jobs for applicantId: 89
+11-04-2025_15:43:46.287{UTC}|report-tool|INFO ||c.t.c.ApplyJobController|Retrieved applied jobs successfully for applicantId: 89
+11-04-2025_15:43:46.287{UTC}|report-tool|INFO ||c.t.u.ResponseSizeLogger|API [/applyjob/getAppliedJobs/89] response size: 233 bytes (~0.23 KB)
+11-04-2025_15:51:11.406{UTC}|report-tool|WARN ||c.z.h.p.PoolBase|HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@621f7488 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+11-04-2025_15:51:12.101{UTC}|report-tool|WARN ||c.z.h.p.PoolBase|HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@27e97185 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+11-04-2025_15:51:14.359{UTC}|report-tool|WARN ||c.z.h.p.PoolBase|HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@3e4bfac4 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+11-04-2025_15:51:14.548{UTC}|report-tool|WARN ||c.z.h.p.PoolBase|HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@7963d6c3 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+11-04-2025_15:51:22.894{UTC}|report-tool|WARN ||c.z.h.p.PoolBase|HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@60424248 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+11-04-2025_15:51:30.849{UTC}|report-tool|WARN ||c.z.h.p.PoolBase|HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@626fb254 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+11-04-2025_15:51:34.451{UTC}|report-tool|WARN ||c.z.h.p.PoolBase|HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@2f2fa3b0 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+11-04-2025_15:51:37.250{UTC}|report-tool|WARN ||c.z.h.p.PoolBase|HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@7b6ccd32 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+11-04-2025_15:51:42.117{UTC}|report-tool|WARN ||c.z.h.p.PoolBase|HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@585ff05d (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+11-04-2025_15:51:43.091{UTC}|report-tool|WARN ||c.z.h.p.PoolBase|HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@5dd6f53d (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+11-04-2025_15:51:44.944{UTC}|report-tool|WARN ||c.z.h.p.PoolBase|HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@1b36704d (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+11-04-2025_15:51:50.094{UTC}|report-tool|WARN ||c.z.h.p.PoolBase|HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@49d662b8 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+11-04-2025_15:51:57.875{UTC}|report-tool|WARN ||c.z.h.p.PoolBase|HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@7334ec21 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+11-04-2025_15:52:12.474{UTC}|report-tool|WARN ||c.z.h.p.PoolBase|HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@4e52af9 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+11-04-2025_15:52:14.105{UTC}|report-tool|WARN ||c.z.h.p.PoolBase|HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@4c1a37d2 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+11-04-2025_15:52:24.256{UTC}|report-tool|WARN ||c.z.h.p.PoolBase|HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@61bfe075 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+11-04-2025_15:52:27.335{UTC}|report-tool|WARN ||c.z.h.p.PoolBase|HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@3cc38bf2 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+11-04-2025_15:52:29.202{UTC}|report-tool|WARN ||c.z.h.p.PoolBase|HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@5d16990c (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+11-04-2025_15:59:05.178{UTC}|report-tool|WARN ||c.z.h.p.PoolBase|HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@43b47693 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+11-04-2025_15:59:56.847{UTC}|report-tool|WARN ||c.z.h.p.PoolBase|HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@338a80ec (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+11-04-2025_16:05:29.730{UTC}|report-tool|INFO ||o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin|Application shutdown requested.
+11-04-2025_16:05:29.739{UTC}|report-tool|INFO ||o.a.c.h.Http11NioProtocol|Pausing ProtocolHandler ["http-nio-8081"]
+11-04-2025_16:05:29.739{UTC}|report-tool|INFO ||o.a.c.c.StandardService|Stopping service [Tomcat]
+11-04-2025_16:05:29.742{UTC}|report-tool|INFO ||o.a.c.c.C.[.[.[/]|Destroying Spring FrameworkServlet 'dispatcherServlet'
+11-04-2025_16:05:29.747{UTC}|report-tool|WARN ||o.a.c.l.WebappClassLoaderBase|The web application [ROOT] appears to have started a thread named [HikariPool-1 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+ java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1763)
+ java.base/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+ java.base/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+ java.base/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)
+ java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+ java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+ java.base/java.lang.Thread.run(Thread.java:1583)
+11-04-2025_16:05:29.748{UTC}|report-tool|INFO ||o.a.c.h.Http11NioProtocol|Stopping ProtocolHandler ["http-nio-8081"]
+11-04-2025_16:05:29.750{UTC}|report-tool|INFO ||o.a.c.h.Http11NioProtocol|Destroying ProtocolHandler ["http-nio-8081"]
+11-04-2025_16:05:29.766{UTC}|report-tool|INFO ||o.s.o.j.LocalContainerEntityManagerFactoryBean|Closing JPA EntityManagerFactory for persistence unit 'default'
+11-04-2025_16:05:29.768{UTC}|report-tool|INFO ||c.z.h.HikariDataSource|HikariPool-1 - Shutdown initiated...
+11-04-2025_16:05:29.778{UTC}|report-tool|INFO ||c.z.h.HikariDataSource|HikariPool-1 - Shutdown completed.
